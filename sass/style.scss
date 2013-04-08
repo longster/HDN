@@ -24,7 +24,7 @@ body {
 
 /* Top bar navigation */
 #masthead {
-	border-bottom: 1px solid $color-white;
+	border-bottom: 4px solid #b3d581;
 	@include filter-gradient(#353535, #232323);
 	@include global-text-shadows(0, -1px, 0, #000);
 
@@ -38,7 +38,7 @@ body {
 	}
 
 	.logo-small a {
-		width: 100px;
+		width: 80px;
 		overflow: hidden;
 		float: left;
 		margin-right: 30px;
@@ -54,7 +54,7 @@ body {
 			padding:0;
 			background: url(img/nav-toggle.png) 0 0 no-repeat;
 			position: absolute;
-			left: 95px;
+			left: 80px;
 			top: 20px;
 			opacity: 0.3;
 			z-index: 1;
@@ -104,6 +104,10 @@ body {
 
 		.has-form {
 			@include filter-gradient(#353535, #232323);
+		}
+		ul.left li:last-child {
+			border-right: 1px solid #000;
+			@include global-box-shadows(1px 0 0 0 #2b2b2b);
 		}
 		.search-query {
 			@include global-custom-radius(50px,50px,50px,50px);
@@ -156,8 +160,9 @@ body {
 #navdrop {
 	padding:50px;
 	display:none;
-	background: $color-white;
-	border-bottom: 1px solid $color-lt-gray;
+	background: #3a3a3a;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
 }
 
 .hero-unit {
