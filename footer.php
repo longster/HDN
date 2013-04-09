@@ -10,16 +10,15 @@
 	<footer id="colophon">
 
 		<div class="row aside-tweetr">
-			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Tweetr')) : ?>
-					Configure at Dashboard > Appearance > Widget > Tweetr
-	        <?php endif; ?>
+			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('twitter')) : ?>
+        	<?php endif; ?>
 		</div>
 
 		<div class="row aside-footer">
-			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
-					Configure at Dashboard > Appearance > Widget > Footer
-	        <?php endif; ?>
+		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
+		<?php endif; ?>
 		</div>
+		
 		<div class="credit">
 			<div class="row">
 				<div class="large-12 columns">
