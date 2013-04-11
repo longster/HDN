@@ -10,10 +10,14 @@ Version:        7.0
 */
 /* General Framework */
 /* Top bar navigation */
-#masthead { border-bottom: 4px solid #b3d581; }
+#masthead { border-bottom: 4px solid #7daf28; }
 #masthead .logo-small a:first-child { width: 70px; text-indent: -100000em; margin-right: 25px; background: url(img/logo-hdn-white-sm.png) center center no-repeat; }
 #masthead a.toggle-nav { left: 65px; top: 13px; }
 #masthead .top-bar-section .search-query { top: 7px; }
+
+#identity h1 { font-size: 76px; padding-bottom: .2em; }
+#identity h5 { font-weight: lighter; font-size: 22px; line-height: 1.8em; }
+#identity .green { color: #7daf28; }
 
 /* Body Content */
 /* Footer */

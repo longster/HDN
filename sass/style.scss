@@ -20,7 +20,7 @@ body {
 
 /* Top bar navigation */
 #masthead {
-	border-bottom: 4px solid #b3d581;
+	border-bottom: 4px solid $color-green;
 
 	input[type="text"]#search {
 	}
@@ -77,8 +77,16 @@ body {
 	}
 
 	h1 {
+		font-size: 76px;
+		padding-bottom: .2em;
 	}
-	h3 {
+	h5 {
+		font-weight: lighter;
+		font-size: 22px;
+		line-height: 1.8em;
+	}
+	.green {
+		color: $color-green;
 	}
 }
 
