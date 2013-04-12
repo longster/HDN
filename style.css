@@ -15,8 +15,8 @@ Version:        7.0
 #masthead a.toggle-nav { left: 65px; top: 13px; }
 #masthead .top-bar-section .search-query { top: 7px; }
 
-#identity h1 { font-size: 76px; padding-bottom: .2em; }
-#identity h5 { font-weight: lighter; font-size: 22px; line-height: 1.8em; }
+#identity h1 { font-size: 76px; padding-bottom: .2em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+#identity h5 { font-weight: lighter; font-size: 22px; line-height: 1.8em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 #identity .green { color: #7daf28; }
 
 /* Body Content */
