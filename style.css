@@ -13,11 +13,14 @@ Version:        7.0
 #masthead { border-bottom: 4px solid #7daf28; }
 #masthead .logo-small a:first-child { width: 70px; text-indent: -100000em; margin-right: 25px; background: url(img/logo-hdn-white-sm.png) center center no-repeat; }
 #masthead a.toggle-nav { left: 65px; top: 13px; }
+#masthead .top-bar-section a:hover:not(.button) { color: #7daf28; }
 #masthead .top-bar-section .search-query { top: 7px; }
 
 #identity h1 { font-size: 76px; padding-bottom: .2em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 #identity h5 { font-weight: lighter; font-size: 22px; line-height: 1.8em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 #identity .green { color: #7daf28; }
+
+#navdrop { background: #333; color: #fff; text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); }
 
 /* Body Content */
 /* Footer */

@@ -68,6 +68,11 @@
     </section>
 
     <section id="navdrop">
+        <div class="row" style="border-bottom: 1px solid #000;">
+            <div class="large-12 columns">
+                BE7A Info
+            </div>
+        </div>
         <div class="row">
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Navdrop')) : ?>
                 Configure at Dashboard > Appearance > Widget > Footer

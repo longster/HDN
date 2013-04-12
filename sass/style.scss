@@ -57,6 +57,7 @@ body {
 			}
 		}
 		a:hover:not(.button) {
+			color: $color-green;
 		 }
 
 		.has-form {
@@ -93,6 +94,9 @@ body {
 }
 
 #navdrop {
+	background: #333;
+	color: #fff;
+	@include global-text-shadows(0, -1px, 0, #000);
 }
 
 .hero-unit {
