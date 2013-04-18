@@ -715,7 +715,7 @@ form.custom .custom.disabled { background-color: #dddddd; }
 .top-bar-section ul li > a.button.success:hover { background: #457a1a; }
 .top-bar-section ul li > a.button.alert { background: #c60f13; }
 .top-bar-section ul li > a.button.alert:hover { background: #970b0e; }
-.top-bar-section ul li.active a { background: #2b2b2b; }
+.top-bar-section ul li.active > a { background: #2b2b2b; }
 .top-bar-section .has-form { padding: 14.33333px; }
 .top-bar-section .has-dropdown { position: relative; }
 .top-bar-section .has-dropdown > a:after { content: ""; display: block; width: 0; height: 0; border: solid 5px; border-color: transparent transparent transparent rgba(255, 255, 255, 0.5); margin-right: 14.33333px; margin-top: -4.5px; position: absolute; top: 22px; right: 0; }
