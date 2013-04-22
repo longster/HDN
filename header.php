@@ -79,12 +79,3 @@
             <?php endif; ?>
         </div>
     </section>
-
-    <section id="identity">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1>Houston<span class="green">Deaf</span>Network</h1>
-                <h5>Your one source information where Deaf Community can share and network all within Houston.</h5>
-            </div>
-        </div>
-    </section>

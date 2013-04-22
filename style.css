@@ -8,13 +8,18 @@ Author URI:     http://lduong.com/
 Template:       WPZurb
 Version:        7.0
 */
+/* Module framework */
 /* General Framework */
 /* Top bar navigation */
-#masthead { border-bottom: 4px solid #7daf28; }
-#masthead .logo-small a:first-child { width: 70px; text-indent: -100000em; margin-right: 25px; background: url(img/logo-hdn-white-sm.png) center center no-repeat; }
-#masthead a.toggle-nav { left: 65px; top: 13px; }
+#masthead { border-bottom: 4px solid #7daf28; text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); }
+#masthead .logo-small, #masthead .tog { width: 70px; margin-right: 25px; background: url(img/logo-hdn-white-sm.png) 4px 7px no-repeat transparent; opacity: .8; }
+#masthead .logo-small:hover, #masthead .tog:hover { opacity: 1; background-color: transparent; }
+#masthead .active .logo-small, #masthead .active .tog { background-color: transparent; }
+#masthead .active .logo-small:hover, #masthead .active .tog:hover { background-color: transparent; }
+#masthead .active a { background-color: none; color: #7daf28; }
+#masthead a.toggle-nav { top: 14px; }
 #masthead .top-bar-section a:hover:not(.button) { color: #7daf28; }
-#masthead .top-bar-section .search-query { top: 7px; }
+#masthead .top-bar-section .search-query { top: 7px; background-color: #444; color: #8D8D8D; text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); filter: dropshadow(color=rgba(0, 0, 0, 0.3), offx=0 offy=2px); -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.55); box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.55); border-top: 1px solid black; border-bottom: 1px solid #4b4b4b; border-left: 0; border-right: 0; }
 
 #identity h1 { font-size: 76px; padding-bottom: .2em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 #identity h5 { font-weight: lighter; font-size: 22px; line-height: 1.8em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
@@ -24,13 +29,13 @@ Version:        7.0
 
 /* Body Content */
 /* Footer */
+#colophon { color: #999; }
 #colophon b.widget-title { padding-bottom: 7px; padding-left: 15px; margin-bottom: 5px; border-bottom: 1px solid black; -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1); box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1); display: block; }
 #colophon .lime-text { color: #b3d581; float: left; }
 #colophon .widget li { list-style: none; font-size: 14px; }
-#colophon a { color: #666; }
-#colophon a:hover { color: #b3d581; text-shadow: 0 1px 0 black; filter: dropshadow(color=black, offx=0 offy=1px); }
-#colophon .aside-footer { background: #303030; padding: 25px 0 10px; border-top: 1px solid #444444; border-bottom: 1px solid #444444; }
-#colophon .credit { border-top: 0; padding-top: 0px; }
+#colophon a { color: #999; }
+#colophon a:hover { color: #b3d581; }
+#colophon .aside-footer { padding: 25px 0 10px; }
 #colophon .credit a { border-bottom: 1px solid #b3d581; }
 #colophon ul.right.inline-list { font-size: 10px; }
 

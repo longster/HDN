@@ -21,31 +21,45 @@ body {
 /* Top bar navigation */
 #masthead {
 	border-bottom: 4px solid $color-green;
-
-	input[type="text"]#search {
-	}
+	@include global-text-shadows(0, -1px, 0, #000);
 
 	.top-bar {
 	}
 
-	.logo-small a:first-child {
+	.logo-small, .tog {
 		width: 70px;
-		text-indent: -100000em;
 		margin-right: 25px;
-		background: url(img/logo-hdn-white-sm.png) center center no-repeat;
-	}	
+		background: url(img/logo-hdn-white-sm.png) 4px 7px no-repeat transparent;
+		opacity: .8;
+		&:hover {
+			opacity: 1;
+			background-color: transparent;
+		}
+	}
+
+	.active {
+		.logo-small, .tog {
+			background-color: transparent;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
+
+	.active a {
+		background-color: none;
+		color: #7daf28;
+	}
 
 	a {
 		&.toggle-nav {
-			left: 65px;
-			top: 13px;
+			top: 14px;
 		}
 		&.open {
 		}
 		&:hover.toggle-nav {
+			
 		}
-	}
-	.active a {
 	}
 
 	.menu-fallback {
@@ -66,9 +80,17 @@ body {
 		}
 		.search-query {
 			top: 7px;
+			background-color: #444;
+			color: #8D8D8D;
+			@include global-text-shadows(0, 2px, 2px, rgba(0,0,0,.3));
+			@include global-box-shadows(inset 0px 0px 0px 0px rgba(0, 0, 0, .55));
+			border-top: 1px solid #000;
+			border-bottom: 1px solid #4b4b4b;
+			border-left: 0;
+			border-right: 0;
 		}
 	}
-}
+}	
 
 
 // Header & Banner
@@ -112,6 +134,7 @@ body {
 
 /* Footer */
 #colophon {
+	color: #999;
 	b.widget-title {
 		padding-bottom: 7px;
 		padding-left: 15px;
@@ -129,21 +152,15 @@ body {
 		font-size: 14px;
 	}
 	a {
-		color: #666;
+		color: #999;
 		&:hover {
 			color: #b3d581;
-			@include global-text-shadows(0, 1px, 0, #000);
 		}
 	}
 	.aside-footer  {
-		background:#303030;
 		padding: 25px 0 10px;
-		border-top: 1px solid #444;
-		border-bottom: 1px solid #444;
 	}
 	.credit {
-		border-top: 0;
-		padding-top: 0px;
 		a {
 			border-bottom: 1px solid #b3d581;
 		}

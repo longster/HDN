@@ -8,71 +8,70 @@
  */
 get_header(); ?>
 
-    <?php if(!is_front_page() && is_home('docs')) : ?>
-    <section id="the-title">
+    <section id="identity">
         <div class="row">
             <div class="large-12 columns">
-                <h1>Articles</h1>
+                <h1>Houston<span class="green">Deaf</span>Network</h1>
+                <h5>Your one source information where Deaf Community can share and network all within Houston.</h5>
             </div>
         </div>
     </section>
-    <?php else: ?>
-    <?php endif; ?>
 
-    <section id="primary">   
-
-    <?php if ( have_posts() ) : ?>
-
-        <?php while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'loop/content', 'front' ); ?>
-        <?php endwhile; ?>
-
-    <?php else : ?>
-
-        <article id="post-0" class="post no-results not-found">
-            <div class="row">
-                <div class="large-8 push-2 columns">
-
-                        <?php if ( current_user_can( 'edit_posts' ) ) :
-                            // Show a different message to a logged-in user who can add posts.
-                        ?>
-                            <header class="entry-header">
-                                <h1 class="entry-title"><?php _e( 'No posts to display', 'wpzurb' ); ?></h1>
-                            </header>
-
-                            <div class="entry-content">
-                                <p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wpzurb' ), admin_url( 'post-new.php' ) ); ?></p>
-                            </div><!-- .entry-content -->
-
-                        <?php else :
-                            // Show the default message to everyone else.
-                        ?>
-                            <header class="entry-header">
-                                <h1 class="entry-title"><?php _e( 'Nothing Found', 'wpzurb' ); ?></h1>
-                            </header>
-
-                            <div class="entry-content">
-                                <p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'wpzurb' ); ?></p>
-                            </div><!-- .entry-content -->
-                        <?php endif; // end current_user_can() check ?>
-
-                </div>
+    <section id="primary">  
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>///  Social Activities  /  Things You can do around Houston</h2>
             </div>
-        </article><!-- #post-0 -->
+        </div>
+        <div class="row">
+            <div class="small-6 large-3 columns">Block 1</div>
+            <div class="small-6 large-3 columns">Block 2</div>
+            <div class="small-6 large-3 columns">Block 3</div>
+            <div class="small-6 large-3 columns">Block 4</div>
+        </div>
 
-    <?php endif; // end have_posts() check ?>
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>///  Worthy News  /  Stuff you Really Ought to know about!</h2>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="small-6 large-3 columns">Block 1</div>
+            <div class="small-6 large-3 columns">Block 2</div>
+            <div class="small-6 large-3 columns">Block 3</div>
+            <div class="small-6 large-3 columns">Block 4</div>
+        </div>
 
-        <?php /* Display navigation to next/previous pages when applicable */ ?>
-        <?php if ( function_exists('wpzurb_pagination') ) { wpzurb_pagination(); } else if ( is_paged() ) { ?>
-            <nav id="post-nav">
-                <div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'wpzurb' ) ); ?></div>
-                <div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wpzurb' ) ); ?></div>
-            </nav>
-        <?php } ?>  
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>///  Random News  /  Collective articles from Houston community</h2>
 
-        <?php get_sidebar(); ?>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="small-6 large-3 columns">Block 1</div>
+            <div class="small-6 large-3 columns">Block 2</div>
+            <div class="small-6 large-3 columns">Block 3</div>
+            <div class="small-6 large-3 columns">Block 4</div>
+        </div>
 
-    </section>
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>///  Old News  /  SomeThings you may have missed</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-2 large-2 columns">Block 1</div>
+            <div class="small-2 large-2 columns">Block 2</div>
+            <div class="small-2 large-2 columns">Block 3</div>
+            <div class="small-2 large-2 columns">Block 4</div>
+            <div class="small-2 large-2 columns">Block 5</div>
+            <div class="small-2 large-2 columns">Block 6</div>
+        </div> 
+        <br/>
+        <br/>
+
+    </section> <!-- #primary -->
 			
 
 <?php get_footer(); ?>
