@@ -17,22 +17,67 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="primary">  
+    <section id="primary">   
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>/// Announcement  /  Important message here</h2>
+            </div>
+        </div>
         <div class="row">
             <div class="large-12 columns">
                 <h2>///  Social Activities  /  Things You can do around Houston</h2>
             </div>
         </div>
         <div class="row">
-            <div class="small-6 large-3 columns">Block 1</div>
-            <div class="small-6 large-3 columns">Block 2</div>
-            <div class="small-6 large-3 columns">Block 3</div>
-            <div class="small-6 large-3 columns">Block 4</div>
+            <article class="small-6 large-3 columns">
+                <?php $my_query = new WP_Query('category_name=asl-social&showposts=4');
+                while ($my_query->have_posts()) : $my_query->the_post();
+                $do_not_duplicate = $post->ID; ?>
+                <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                <?php wpzurb_entry_meta(); ?>
+                <?php /*the_content('continue &raquo;'); */?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            </article>
+
+            <article class="small-6 large-3 columns">
+                <?php $my_query = new WP_Query('category_name=dphhh-dno&showposts=4');
+                while ($my_query->have_posts()) : $my_query->the_post();
+                $do_not_duplicate = $post->ID; ?>
+                <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                <?php wpzurb_entry_meta(); ?>
+                <?php /* the_content('continue &raquo;'); */ ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            </article>
+
+            <article class="small-6 large-3 columns">
+                <?php $my_query = new WP_Query('category_name=events&showposts=4');
+                while ($my_query->have_posts()) : $my_query->the_post();
+                $do_not_duplicate = $post->ID; ?>
+                <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                <?php wpzurb_entry_meta(); ?>
+                <?php /* the_content('continue &raquo;'); */ ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            </article>
+
+            <article class="small-6 large-3 columns">
+                <?php $my_query = new WP_Query('category_name=shows&showposts=4');
+                while ($my_query->have_posts()) : $my_query->the_post();
+                $do_not_duplicate = $post->ID; ?>
+                <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                <?php wpzurb_entry_meta(); ?>
+                <?php /* the_content('continue &raquo;'); */ ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            </article>
+
         </div>
 
         <div class="row">
             <div class="large-12 columns">
-                <h2>///  Worthy News  /  Stuff you Really Ought to know about!</h2>
+                <h2>///  Latest News  /  Collective articles from Houston community</h2>
             </div>
         </div> 
         <div class="row">
@@ -41,13 +86,6 @@ get_header(); ?>
             <div class="small-6 large-3 columns">Block 3</div>
             <div class="small-6 large-3 columns">Block 4</div>
         </div>
-
-        <div class="row">
-            <div class="large-12 columns">
-                <h2>///  Random News  /  Collective articles from Houston community</h2>
-
-            </div>
-        </div> 
         <div class="row">
             <div class="small-6 large-3 columns">Block 1</div>
             <div class="small-6 large-3 columns">Block 2</div>
@@ -55,11 +93,6 @@ get_header(); ?>
             <div class="small-6 large-3 columns">Block 4</div>
         </div>
 
-        <div class="row">
-            <div class="large-12 columns">
-                <h2>///  Old News  /  SomeThings you may have missed</h2>
-            </div>
-        </div>
         <div class="row">
             <div class="small-2 large-2 columns">Block 1</div>
             <div class="small-2 large-2 columns">Block 2</div>
