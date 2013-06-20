@@ -129,7 +129,23 @@ body {
 }
 
 /* Body Content */
+.sticky-post {
+	margin-top: 20px;
+}
 #primary {
+	.home & {
+		article {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	h2 {
+		font-size: 30px;
+		margin-bottom:0;
+	}
+	h3 {
+		font-size: 20px;
+	}
 }
 
 /* Footer */

@@ -28,6 +28,12 @@ Version:        7.0
 #navdrop { background: #333; color: #fff; text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); }
 
 /* Body Content */
+.sticky-post { margin-top: 20px; }
+
+.home #primary article { padding-top: 0; padding-bottom: 0; }
+#primary h2 { font-size: 30px; margin-bottom: 0; }
+#primary h3 { font-size: 20px; }
+
 /* Footer */
 #colophon { color: #999; }
 #colophon b.widget-title { padding-bottom: 7px; padding-left: 15px; margin-bottom: 5px; border-bottom: 1px solid black; -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1); box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1); display: block; }

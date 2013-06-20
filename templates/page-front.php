@@ -18,18 +18,39 @@ get_header(); ?>
     </section>
 
     <section id="primary">   
-        <div class="row">
-            <div class="large-12 columns">
-                <h2>/// Announcement  /  Important message here</h2>
+
+        <?php 
+        $sticky = get_option( 'sticky_posts' );
+        $args = array(
+            'posts_per_page' => 1,
+            'post__in'  => $sticky,
+            'ignore_sticky_posts' => 1
+        ); 
+        $query = new WP_Query( $args );
+        ?>
+
+        <?php if ( $sticky[0] ) :?>
+            <div class="row">
+                <div class="large-12 columns sticky-post">
+                    <?php while ($query->have_posts()) : $query->the_post();
+                    $do_not_duplicate = $post->ID; ?>
+                    <h2>/// Attention / <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                    <?php the_excerpt('continue &raquo;'); ?>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
+
         <div class="row">
             <div class="large-12 columns">
                 <h2>///  Social Activities  /  Things You can do around Houston</h2>
+                <h5>Are you hosting an event or know of any activities that’s open to everyone, <a href="">share your information</a> with us!</h5>
             </div>
         </div>
         <div class="row">
-            <article class="small-6 large-3 columns">
+            <article class="large-4 columns">
+                <h3>///ASL Social</h3>
                 <?php $my_query = new WP_Query('category_name=asl-social&showposts=4');
                 while ($my_query->have_posts()) : $my_query->the_post();
                 $do_not_duplicate = $post->ID; ?>
@@ -40,7 +61,8 @@ get_header(); ?>
                 <?php wp_reset_postdata(); ?>
             </article>
 
-            <article class="small-6 large-3 columns">
+            <article class="large-4 columns">
+                <h3>///Deaf Night Out</h3>
                 <?php $my_query = new WP_Query('category_name=dphhh-dno&showposts=4');
                 while ($my_query->have_posts()) : $my_query->the_post();
                 $do_not_duplicate = $post->ID; ?>
@@ -51,8 +73,9 @@ get_header(); ?>
                 <?php wp_reset_postdata(); ?>
             </article>
 
-            <article class="small-6 large-3 columns">
-                <?php $my_query = new WP_Query('category_name=events&showposts=4');
+            <article class="large-4 columns">
+                <h3>///Events & Shows</h3>
+                <?php $my_query = new WP_Query('category_name=events,shows&showposts=4');
                 while ($my_query->have_posts()) : $my_query->the_post();
                 $do_not_duplicate = $post->ID; ?>
                 <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
@@ -61,18 +84,6 @@ get_header(); ?>
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
             </article>
-
-            <article class="small-6 large-3 columns">
-                <?php $my_query = new WP_Query('category_name=shows&showposts=4');
-                while ($my_query->have_posts()) : $my_query->the_post();
-                $do_not_duplicate = $post->ID; ?>
-                <h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-                <?php wpzurb_entry_meta(); ?>
-                <?php /* the_content('continue &raquo;'); */ ?>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            </article>
-
         </div>
 
         <div class="row">
