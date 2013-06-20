@@ -6,13 +6,17 @@
   Foundation.libs.orbit = {
     name: 'orbit',
 
-    version: '4.1.0',
+    version: '4.2.0',
 
     settings: {
       timer_speed: 10000,
+      pause_on_hover: true,
+      resume_on_mouseout: false,
       animation_speed: 500,
       bullets: true,
       stack_on_small: true,
+      navigation_arrows: true,
+      slide_number: true,
       container_class: 'orbit-container',
       stack_on_small_class: 'orbit-stack-on-small',
       next_class: 'orbit-next',
@@ -35,6 +39,11 @@
 
       if (typeof method === 'object') {
         $.extend(true, self.settings, method);
+      }
+
+      if ($(scope).is('[data-orbit]')) {
+        var scoped_self = $.extend(true, {}, self);
+        scoped_self._init(idx, el);
       }
 
       $('[data-orbit]', scope).each(function(idx, el) {
@@ -97,13 +106,17 @@
       
       $.extend(true, self.settings, self.data_options($slides_container));
 
-      $container.append(self._prev_html());
-      $container.append(self._next_html());
+      if (self.settings.navigation_arrows) {
+          $container.append(self._prev_html());
+          $container.append(self._next_html());
+      }
       $slides_container.addClass(self.settings.slides_container_class);
       if (self.settings.stack_on_small) {
         $container.addClass(self.settings.stack_on_small_class);
       }
-      $container.append(self._slide_number_html(1, $slides.length));
+      if (self.settings.slide_number) {
+        $container.append(self._slide_number_html(1, $slides.length));
+      }
       $container.append(self._timer_html());
       if (self.settings.bullets) {
         $container.after(self._bullets_container_html($slides));
@@ -113,7 +126,7 @@
       $slides_container.append($slides.first().clone().attr('data-orbit-slide',''));
       $slides_container.prepend($slides.last().clone().attr('data-orbit-slide',''));
       // Make the first "real" slide active
-      $slides_container.css('marginLeft', '-100%');
+      $slides_container.css(Foundation.rtl ? 'marginRight' : 'marginLeft', '-100%');
       $slides.first().addClass(self.settings.active_slide_class);
 
       self._init_events($slides_container);
@@ -155,6 +168,16 @@
         });
 
       $container
+        .on('mouseenter.fndtn.orbit', function(e) {
+          if (self.settings.pause_on_hover) {
+            self._stop_timer($slides_container);
+          }
+        })
+        .on('mouseleave.fndtn.orbit', function(e) {
+          if (self.settings.resume_on_mouseout) {
+            self._start_timer($slides_container);
+          }
+        })
         .on('orbit:after-slide-change.fndtn.orbit', function(e, orbit) {
           var $slide_number = $container.find('.' + self.settings.slide_number_class);
 
@@ -162,12 +185,12 @@
             $slide_number.replaceWith(self._slide_number_html(orbit.slide_number, orbit.total_slides));
           }
         })
-        .on('orbit:next-slide.fndtn.orbit click.fndtn.orbit', '.' + self.settings.next_class, function(e) {
+        .on('orbit:next-slide.fndtn.orbit click.fndtn.orbit', '.' + self.settings.next_class.split(" ").join("."), function(e) {
           e.preventDefault();
           self._reset_timer($slides_container, true);
           self._goto($slides_container, 'next', function() {});
         })
-        .on('orbit:prev-slide.fndtn.orbit click.fndtn.orbit', '.' + self.settings.prev_class, function(e) {
+        .on('orbit:prev-slide.fndtn.orbit click.fndtn.orbit', '.' + self.settings.prev_class.split(" ").join("."), function(e) {
           e.preventDefault();
           self._reset_timer($slides_container, true);
           self._goto($slides_container, 'prev', function() {});
@@ -261,7 +284,7 @@
           $container = $slides_container.parent(),
           $timer = $container.find('.' + self.settings.timer_container_class),
           $progress = $timer.find('.' + self.settings.timer_progress_class),
-          progress_pct = $progress.width() / $timer.width()
+          progress_pct = $progress.width() / $timer.width();
       self._rebuild_timer($container, progress_pct * 100 + '%');
       // $progress.stop();
       $slides_container.trigger('orbit:timer-stopped');
