@@ -3,17 +3,17 @@
  * Index
  *
  * @author      Longster
- * @package     WPZurb-hdn
+ * @package     hdn
  * @since       1.0 - 03-12-2013
  */
 
 get_header(); ?>
 
-	<?php if(!is_front_page() && is_home()) : ?>
+	<?php if(!is_front_page() && is_home('docs')) : ?>
     <header id="the-title">
         <div class="row">
             <div class="large-12 columns">
-                <h1>Articles</h1>
+                <h1>Docs</h1>
             </div>
         </div>
     </header>
@@ -38,22 +38,22 @@ get_header(); ?>
 							// Show a different message to a logged-in user who can add posts.
 						?>
 							<header class="entry-header">
-								<h1 class="entry-title"><?php _e( 'No posts to display', 'wpzurb' ); ?></h1>
+								<h1 class="entry-title"><?php _e( 'No posts to display', 'hdn' ); ?></h1>
 							</header>
 
 							<div class="entry-content">
-								<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'wpzurb' ), admin_url( 'post-new.php' ) ); ?></p>
+								<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'hdn' ), admin_url( 'post-new.php' ) ); ?></p>
 							</div><!-- .entry-content -->
 
 						<?php else :
 							// Show the default message to everyone else.
 						?>
 							<header class="entry-header">
-								<h1 class="entry-title"><?php _e( 'Nothing Found', 'wpzurb' ); ?></h1>
+								<h1 class="entry-title"><?php _e( 'Nothing Found', 'hdn' ); ?></h1>
 							</header>
 
 							<div class="entry-content">
-								<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'wpzurb' ); ?></p>
+								<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'hdn' ); ?></p>
 							</div><!-- .entry-content -->
 						<?php endif; // end current_user_can() check ?>
 
@@ -64,10 +64,10 @@ get_header(); ?>
 	<?php endif; // end have_posts() check ?>
 
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php if ( function_exists('wpzurb_pagination') ) { wpzurb_pagination(); } else if ( is_paged() ) { ?>
+		<?php if ( function_exists('hdn_pagination') ) { hdn_pagination(); } else if ( is_paged() ) { ?>
 			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'wpzurb' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'wpzurb' ) ); ?></div>
+				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'hdn' ) ); ?></div>
+				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'hdn' ) ); ?></div>
 			</nav>
 		<?php } ?>	
 

@@ -3,12 +3,12 @@
  * Header
  *
  * @author      Longster
- * @package     HDN
- * @since       7.0 - 04-30-2013
+ * @package     hdn
+ * @since       1.0 - 03-12-2013
  */
 ?>
 <!DOCTYPE html>
-<!--[if IE 8]>         <html  class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>		   <html  class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -28,17 +28,18 @@
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/apple-touch-icon.png">
 	
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Russo+One' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
     <!--[if lt IE 8]><p style="background-color: orange; color: #333;">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> to experience this site.</p><![endif]-->
-    <section id="masthead" class="sticky">
+    <section id="masthead" class="contain-to-grid sticky">
         <nav class="top-bar">
             <ul class="title-area">
                 <li class="name <?php if ( is_front_page() ) : ?>active<?php endif; ?>">
-                    <h1 class="logo-small"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><a href="#" class="toggle-nav"></a></h1>
+                    <h1><a href="<?php echo home_url( '/' ); ?>" class="logo-small" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><span class="tog"><a href="#" class="toggle-nav"></a></span></h1>
                 </li>
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
@@ -50,8 +51,8 @@
                         'container' => false,
                         'depth' => 0,
                         'items_wrap' => '<ul class="left">%3$s</ul>',
-                        'fallback_cb' => 'wpzurb_menu_fallback', // workaround to show a message to set up a menu
-                        'walker' => new wpzurb_walker( array(
+                        'fallback_cb' => 'hdn_menu_fallback', // workaround to show a message to set up a menu
+                        'walker' => new hdn_walker( array(
                             'in_top_bar' => true,
                             'item_type' => 'li'
                         ) ),
@@ -67,12 +68,8 @@
         </nav>
     </section>
 
+    
     <section id="navdrop">
-        <div class="row" style="border-bottom: 1px solid #000;">
-            <div class="large-12 columns">
-                BE7A Info
-            </div>
-        </div>
         <div class="row">
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Navdrop')) : ?>
                 Configure at Dashboard > Appearance > Widget > Footer

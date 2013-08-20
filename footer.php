@@ -3,38 +3,31 @@
  * Footer
  *
  * @author      Longster
- * @package     HDN
- * @since       7.0 - 04-30-2013
+ * @package     hdn
+ * @since       1.0 - 03-12-2013
  */
 ?>
 	<footer id="colophon">
-
-		<div class="aside-tweetr">
-			<div class="row">
-				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('twitter')) : ?>
-	        	<?php endif; ?>
-        	</div>
-		</div>
-
 		<div class="aside-footer">
 			<div class="row">
-			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Child Footer')) : ?>
-			<?php endif; ?>
+				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
+						Configure at Dashboard > Appearance > Widget > Footer
+		        <?php endif; ?>
 			</div>
 		</div>
 		
 		<div class="credit">
 			<div class="row">
 				<div class="large-12 columns">
-					<small><?php wpzurb_credits(); ?></small>
+					<small><?php hdn_credits(); ?></small>
 	                <?php
 	                    wp_nav_menu( array(
 	                        'theme_location' => 'footer-menu',
 	                        'container' => false,
 	                        'depth' => 0,
 	                        'items_wrap' => '<ul class="right inline-list">%3$s</ul>',
-	                        'fallback_cb' => 'wpzurb_menu_fallback', // workaround to show a message to set up a menu
-	                    	'walker' => new wpzurb_walker( array(
+	                        'fallback_cb' => 'hdn_menu_fallback', // workaround to show a message to set up a menu
+	                    	'walker' => new hdn_walker( array(
 	                            'in_top_bar' => false,
 	                            'item_type' => 'li'
 	                        ) ),
@@ -60,20 +53,20 @@
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.dropdown.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.forms.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.interchange.js"></script>	
-	<?php /* script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.joyride.js"></script */ ?>	
+	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.joyride.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.magellan.js"></script>	
-	<?php /* script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.orbit.js"></script */ ?>	
+	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.orbit.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.placeholder.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.reveal.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.section.js"></script>	
-	<?php /* script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.tooltips.js"></script */ ?>	
+	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.tooltips.js"></script>	
 	<script src="<?php bloginfo( 'template_url' );?>/js/foundation/foundation.topbar.js"></script>
 	
 	<script>
 	$(document).foundation();
 	</script>
 
-	<script src="<?php bloginfo( 'template_url' );?>/js/wpzurb.js"></script>
+	<script src="<?php bloginfo( 'template_url' );?>/js/hdn.js"></script>
 
 	<?php if(is_single()) : ?>
 	<script type="text/javascript">

@@ -218,8 +218,8 @@ $header-font-weight: lighter;
 // Style the <hr> element
 
 // $hr-border-width: 1px;
-// $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-style: dotted;
+$hr-border-color: #e9e9e9;
 // $hr-margin: emCalc(20);
 
 // Style lists
@@ -1235,11 +1235,11 @@ $list-style-position: inside;
 
 // Background color for the top bar
 
-$topbar-bg: #303030 !default;
+$topbar-bg: #fafafa !default;
 
 // Height and margin
 
-$topbar-height: 43px;
+$topbar-height: 42px;
 // $topbar-margin-bottom: emCalc(30);
 
 // Control Input height for top bar
@@ -1253,16 +1253,16 @@ $topbar-height: 43px;
 
 // Style the top bar dropdown elements
 
-// $topbar-dropdown-bg: #222;
-// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-bg: #fafafa;
+$topbar-dropdown-link-color: #333;
 // $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
 // $topbar-dropdown-toggle-size: 5px;
-// $topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-color: #2ba6cb;
 // $topbar-dropdown-toggle-alpha: 0.5;
 
 // Set the link colors and styles for top-level nav
 
-// $topbar-link-color: #fff;
+$topbar-link-color: #333;
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
@@ -1282,8 +1282,8 @@ $topbar-height: 43px;
 // $topbar-menu-link-font-size: emCalc(13);
 // $topbar-menu-link-weight: bold;
 // $topbar-menu-link-color: #fff;
-// $topbar-menu-icon-color: #fff;
-// $topbar-menu-link-color-toggled: #888;
+$topbar-menu-icon-color: #333;
+$topbar-menu-link-color-toggled: #333;
 // $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
