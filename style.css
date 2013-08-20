@@ -12,6 +12,7 @@ Version:        7.0
 /* General Framework */
 /* Top bar navigation */
 #masthead { border-bottom: 4px solid #7daf28; text-shadow: 0 -1px 0 black; filter: dropshadow(color=black, offx=0 offy=-1px); }
+#masthead .top-bar { background: inherit; }
 #masthead .logo-small, #masthead .tog { width: 70px; margin-right: 25px; background: url(img/logo-hdn-white-sm.png) 4px 7px no-repeat transparent; opacity: .8; }
 #masthead .logo-small:hover, #masthead .tog:hover { opacity: 1; background-color: transparent; }
 #masthead .active .logo-small, #masthead .active .tog { background-color: transparent; }

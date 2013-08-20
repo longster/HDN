@@ -24,6 +24,7 @@ body {
 	@include global-text-shadows(0, -1px, 0, #000);
 
 	.top-bar {
+		background: inherit;
 	}
 
 	.logo-small, .tog {

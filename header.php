@@ -34,7 +34,7 @@
 
 <body <?php body_class(); ?>>
     <!--[if lt IE 8]><p style="background-color: orange; color: #333;">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> to experience this site.</p><![endif]-->
-    <section id="masthead" class="contain-to-grid sticky">
+    <section id="masthead" class="sticky">
         <nav class="top-bar">
             <ul class="title-area">
                 <li class="name <?php if ( is_front_page() ) : ?>active<?php endif; ?>">
