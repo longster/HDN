@@ -12,7 +12,7 @@ Version: 1.5
 /* Module framework */
 a, #masthead .top-bar-section a:not(.button) { -webkit-transition: color 0.2s ease-in-out; -moz-transition: color 0.2s ease-in-out; -o-transition: color 0.2s ease-in-out; transition: color 0.2s ease-in-out; }
 
-#masthead .logo-small, #masthead .tog, #masthead .active .logo-small, #masthead .active .tog, #masthead a.toggle-nav { -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; -ms-transition: all 500ms ease-in-out; }
+#masthead .logo-small, #masthead .active .logo-small, #masthead .active .tog, #masthead a.toggle-nav { -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; -ms-transition: all 500ms ease-in-out; }
 
 /* General Framework */
 html { background-color: #3a3a3a; }
@@ -23,8 +23,9 @@ body .button { text-shadow: 0 0 0 black; filter: dropshadow(color=black, offx=0 
 /* Top bar navigation */
 #masthead { border-bottom: 1px solid #e7e7e7; text-shadow: 0 1px 0 white; filter: dropshadow(color=white, offx=0 offy=1px); }
 #masthead .top-bar { background: none; margin-bottom: 0; }
-#masthead .logo-small, #masthead .tog { width: 70px; height: 32px; overflow: hidden; text-indent: -1000000px; float: left; margin: 4px 25px 0 15px; background: url(img/logo-hdn-black-sm.png) 4px 7px no-repeat transparent; -webkit-border-radius: 3px 0px 0px 3px; border-radius: 3px 0px 0px 3px; opacity: .8; }
-#masthead .logo-small:hover, #masthead .tog:hover { opacity: 1; background-color: transparent; }
+#masthead .logo-small { width: 70px; height: 32px; overflow: hidden; text-indent: -1000000px; float: left; margin: 4px 25px 0 15px; background: url(img/logo-hdn-black-sm.png) 4px 7px no-repeat transparent; -webkit-border-radius: 3px 0px 0px 3px; border-radius: 3px 0px 0px 3px; opacity: .8; }
+#masthead .logo-small:hover { opacity: 1; background-color: transparent; }
+#masthead .logo-small .tog { width: 40px; }
 #masthead .tog { background-image: none; margin-left: 1px; -webkit-border-radius: 0px 3px 3px 0px; border-radius: 0px 3px 3px 0px; }
 #masthead .active .logo-small, #masthead .active .tog { background-color: transparent; }
 #masthead .active .logo-small:hover, #masthead .active .tog:hover { background-color: transparent; }

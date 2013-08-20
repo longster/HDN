@@ -19,6 +19,27 @@ get_header(); ?>
         </div>
     </section>
 
+    <section id="primary">
+        <div class="row">
+            <div class="large-12 columns">
+                <ul class="small-block-grid-2 large-block-grid-4">
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                    <li> block </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
 	<?php while ( have_posts() ) : the_post(); ?>
         <section id="primary"> 
 		      <?php the_content(); ?>

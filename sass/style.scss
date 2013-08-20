@@ -35,7 +35,7 @@ a {
 		margin-bottom: 0;
 	}
 
-	.logo-small, .tog {
+	.logo-small {
 		width: 70px;
 		height: 32px;
 		overflow: hidden;
@@ -50,6 +50,9 @@ a {
 			opacity: 1;
 			background-color: transparent;
 		}
+	.tog {
+		width: 40px;
+	}
 	}	
 
 	.tog {
