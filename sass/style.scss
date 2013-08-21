@@ -14,10 +14,10 @@ Version: 1.5
 /* General Framework */
 html {background-color: #3a3a3a;}
 body {
-	@include global-text-shadows(0, 1px, 0, #fff);
+	//@include global-text-shadows(0, 1px, 0, #fff);
 	
 	.button {
-    	@include global-text-shadows(0, 0, 0, #000);
+    	//@include global-text-shadows(0, 0, 0, #000);
 	}
 }
 a {
@@ -33,6 +33,16 @@ a {
 	.top-bar {
 		background: none;
 		margin-bottom: 0;
+		max-width: 100%;
+
+		input { // Part of Search box
+			top: 0;
+			height: inherit;
+			@include global-box-shadows(0px 0px 0px 0px rgba(0, 0, 0, .0));		
+			&:focus {
+				@include global-box-shadows(0px 0px 0px 0px rgba(0, 0, 0, .0));	
+			}
+		}
 	}
 
 	.logo-small {
@@ -113,8 +123,8 @@ a {
 		float: left;
 		font-weight:normal;
 		padding: 0 10px;
-		border-right: solid 1px #000;
-		border-left: solid 1px #000;
+		border-right: solid 1px #eee;
+		border-left: solid 1px #eee;
 		background: none;
 	}
 
@@ -161,14 +171,18 @@ a {
 		}
 
 		.search-query {
-			@include global-custom-radius(50px,50px,50px,50px);
-			background: url(http://cpanel.net/wp-content/themes/cp/images/search-dark.png) no-repeat 10px 6px #e3e3e3;
+			//@include global-custom-radius(50px,50px,50px,50px);
+			background: url(http://cpanel.net/wp-content/themes/cp/images/search-dark.png) no-repeat 10px 14px #fafafa;
 			color: #8D8D8D;
-			padding: 7px 15px 5px 35px;
-			@include global-text-shadows(0, 1px, 0, #fff);
-			@include global-box-shadows(inset 0px 0px 5px 0px rgba(0, 0, 0, .05));
-			border: 1px solid #d6d6d6;
-			top: 6px;
+			padding: 8px 15px 6px 35px;
+			//@include global-text-shadows(0, 1px, 0, #fff);
+			//@include global-box-shadows(inset 0px 0px 5px 0px rgba(0, 0, 0, .05));
+			//border: 1px solid #d6d6d6;
+			border-top: 0;
+			border-bottom: 0;
+			border-left: 1px solid #eee;
+			border-right: 0;
+			//top: 6px;
 		}
 	}
 }
