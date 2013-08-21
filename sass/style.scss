@@ -298,6 +298,10 @@ a {
 	}
 	.page-numbers {
 		margin-bottom: 0;
+		display: inline-block;
+		.current {
+			padding: 0.0625em 0.4375em 0.0625em;
+		}
 	}
 }
 .entry-content {
@@ -327,6 +331,8 @@ a {
 		border-left: 0;
 	}
 }
+
+
 
 /* Footer */
 #colophon {

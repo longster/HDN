@@ -9,25 +9,39 @@
 
 get_header(); ?>
 
-	<?php if(!is_front_page() && is_home('docs')) : ?>
-    <header id="the-title">
+	<?php if(is_front_page() && is_home()) : ?>
+    
+    <section id="identity">
         <div class="row">
             <div class="large-12 columns">
-                <h1>Docs</h1>
+                <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="brand logo">
+                    <h1 class="logo">Houston Deaf Network</h1>
+                    <h3>/// Your one source information where Deaf Community share News, Activities, Information and more all within local Houston!</h3>
+                </a>
             </div>
         </div>
-    </header>
-	<?php else: ?>
+    </section>
+
+    <section id="submission">
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>Share Your Information With Us!</h2>
+                <h4>Announcements | News | Opinion | Support | Resources | Questions | Activities | Events | and more!</h4>
+            </div>
+        </div>
+    </section>
 	<?php endif; ?>
 
 	<section id="primary">
 
 	<?php if ( have_posts() ) : ?>
-
+		<ul class="row no-bullet">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'loop/content', get_post_format() ); ?>
+			<li class="small-6 medium-4 large-3 columns">
+			<?php get_template_part( 'loop/content', 'front' ); ?>
+			</li>
 		<?php endwhile; ?>
-
+		</ul>
 	<?php else : ?>
 
 		<article id="post-0" class="post no-results not-found">
