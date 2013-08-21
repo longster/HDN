@@ -14,11 +14,8 @@ Version: 1.5
 /* General Framework */
 html {background-color: #3a3a3a;}
 body {
-	//@include global-text-shadows(0, 1px, 0, #fff);
-	
-	.button {
-    	//@include global-text-shadows(0, 0, 0, #000);
-	}
+	background-color: #fafafa;
+	.button {}
 }
 a {
 	@extend %texttransition;
@@ -191,7 +188,7 @@ a {
 // Header & Banner
 #identity {
 	border-bottom: 1px solid $color-lt-gray;
-	background: $color-white; 
+	//background: $color-white; 
 	
 	a.brand.logo {
 		padding: 10px 0 10px 0;
@@ -217,12 +214,18 @@ a {
 
 #navdrop {
 	padding:20px 0;
+	color: $color-white;
 	display:none;
-	background: $color-white;
+	background: $color-charcoal;
 	border-bottom: 1px solid $color-lt-gray;
 }
 
-.hero-unit {
+#submission {
+	background-color: $color-white;
+	text-align:center;
+	border-bottom: 1px solid $color-lt-gray;
+}
+/*.hero-unit {
 	padding: 25px 0 0 0; 
 	max-width:100%; 
 
@@ -241,7 +244,7 @@ a {
 		line-height: 1.2em;
 		color: $color-charcoal;
 	}
-}
+}*/
 
 /* Body Content */
 .blog article,
@@ -260,7 +263,8 @@ a {
 }
 
 #primary {
-	background: $color-white;
+	//background: $color-white;
+	padding: 2em 0;
 	blockquote {
 		border-left: 0;
 		font-size: 1.6em;
@@ -269,8 +273,17 @@ a {
 		}
 	}
 	article {
-		padding-bottom: 2.0em;
-		padding-top: 2.0em;
+		//padding-bottom: 2.0em;
+		//padding-top: 2.0em;
+	}
+
+	.boxPost {
+		background: white; 
+		height: 240px; 
+		border: 1px solid #eee; 
+		margin-top: 1em; 
+		margin-bottom: 1em; 
+		overflow:hidden;
 	}
 	.entry-title {
 		margin-bottom: .2em;
