@@ -8,14 +8,11 @@
  */
 
 get_header(); ?>
-
-	<?php if(is_front_page() && is_home()) : ?>
     
-    <section id="identity">
+    <section class="catTitle">
         <div class="row">
-            <div class="large-12 columns hdn">
-                <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class="charcoal">Houston</span>Deaf<span class="charcoal">Network</span></a></h1>
-                <h5><span class="green">///</span>Your one source information where Deaf Community share News, Activities, Information and more all within local Houston!</h5>
+            <div class="large-12 columns">
+                <h1><?php single_cat_title(); ?></h1>
             </div>
         </div>
     </section>
@@ -28,7 +25,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
-	<?php endif; ?>
+
 
 	<section id="primary">
 
@@ -83,7 +80,9 @@ get_header(); ?>
 			</nav>
 		<?php } ?>	
 
-	</section><!-- #primary -->
-	
+	</section>
+
+
+
 
 <?php get_footer(); ?>

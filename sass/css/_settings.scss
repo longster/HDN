@@ -53,7 +53,7 @@ $default-float: left;
 
 $body-bg: #3a3a3a;
 $body-font-color: #3c3c3c;
-$body-font-family: Ubuntu, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: "Maven Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -160,7 +160,7 @@ $row-width: emCalc(1200);
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Maven Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $header-font-weight: lighter;
 // $header-font-style: normal;
 // $header-font-color: #222;
@@ -1253,11 +1253,11 @@ $topbar-height: 42px;
 
 // Style the top bar dropdown elements
 
-$topbar-dropdown-bg: #fafafa;
+$topbar-dropdown-bg: #fff;
 $topbar-dropdown-link-color: #333;
 // $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
 // $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: #2ba6cb;
+$topbar-dropdown-toggle-color: #7daf28;
 // $topbar-dropdown-toggle-alpha: 0.5;
 
 // Set the link colors and styles for top-level nav

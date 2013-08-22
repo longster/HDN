@@ -28,7 +28,8 @@
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/ico/apple-touch-icon.png">
 	
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700|Russo+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+    
     <?php wp_head(); ?>
 
 </head>
