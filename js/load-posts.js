@@ -24,9 +24,9 @@ $(document).ready(function() {
 	 */
 	if(pageNum <= max) {
 		// Insert the "More Posts" link.
-		$('#block-grid')
+		$('#primary')
 			.append('<ul class="row no-bullet pbd-alp-placeholder-'+ pageNum +'"></ul>')
-			.append('<p id="pbd-alp-load-posts" class="large-12 columns text-center"><a href="#">Load More Posts</a></p>');
+			.append('<p id="pbd-alp-load-posts"><a href="#">Load More Articles</a></p>');
 			
 		// Remove the traditional navigation.
 		$('#post-nav').remove();
