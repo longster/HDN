@@ -1,3 +1,5 @@
+
+<li class="block-post small-6 medium-4 large-3 columns">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('box-post'); ?>>
 		<header class="box-entry-header">
 			<span class=""><?php the_category(',') ?></span>
@@ -12,3 +14,4 @@
 			by <a href="mailto:<?php the_author_email(); ?>"><?php the_author(); ?></a>
 		</footer><!-- .box-entry-meta -->
 	</article><!-- #post -->
+</li>

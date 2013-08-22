@@ -295,6 +295,9 @@ a {@extend %texttransition;}
 
 
 // All and Within Box Post for Index and Categories
+li:last-child.block-post {
+	float: left !important;
+}
 .box-post {
 	background: white; 
 	height: 240px; 
@@ -382,6 +385,26 @@ a {@extend %texttransition;}
 		font-size: 10px;
 	}
 }
+
+
+
+/* Load Post Style */
+#pbd-alp-load-posts a:link, #pbd-alp-load-posts a:visited {
+	display: block;
+	text-align: center;
+	padding: 4px 0;
+	color: $color-white;
+	text-decoration: none;
+	background-color: $color-green;
+	opacity: .7;
+	@extend %easetransition;
+	@include global-custom-radius(3px,3px,3px,3px);
+}
+
+#pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active {
+	opacity: 1;
+}
+
 
 
 

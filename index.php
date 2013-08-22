@@ -33,11 +33,9 @@ get_header(); ?>
 	<section id="primary">
 
 	<?php if ( have_posts() ) : ?>
-		<ul class="row no-bullet">
+		<ul id="block-grid" class="row no-bullet">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<li class="small-6 medium-4 large-3 columns">
 			<?php get_template_part( 'loop/content', 'block' ); ?>
-			</li>
 		<?php endwhile; ?>
 		</ul>
 	<?php else : ?>
@@ -81,7 +79,7 @@ get_header(); ?>
 				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'hdn' ) ); ?></div>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'hdn' ) ); ?></div>
 			</nav>
-		<?php } ?>	
+		<?php }  ?>	
 
 	</section><!-- #primary -->
 	
