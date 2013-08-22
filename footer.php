@@ -69,12 +69,12 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/hdn.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/load-posts.js"></script>
 
-	<?php if(is_single() || is_page()) : ?>
+	<?php /* if(is_single() || is_page()) : ?>
 	<script type="text/javascript">
 		//set sidebar to to match the document height
 		document.getElementById('sidebar').style.height = $(document).height() - 380 + "px";
 	</script>
-	<?php endif; ?>
+	<?php endif; */ ?>
 
 	<?php wp_footer(); ?>
 

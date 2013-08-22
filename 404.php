@@ -1,27 +1,27 @@
 <?php get_header(); ?>
 
-    <section id="the-title">
+    <section class="catTitle">
         <div class="row">
             <div class="large-12 columns">
-                <h1><?php _e('Way to go... you borke it!', 'hdn'); ?></h1>
+                <h1><?php _e('You borke my site! Way to go...', 'hdn'); ?></h1>
             </div>
         </div>
     </section>
 
 	<section id="primary">
 		<div class="row">
-			<div class="large-12 columns">
+			<div class="large-11 push-1 columns">
 					<article id="post-0" class="post no-results not-found">
 						<header>
 							<h1 class="entry-title error"><?php _e('Page is nowhere to be found.', 'hdn'); ?></h1>
 						</header>
 
 						<div class="entry-content">
-							<p><?php _e("Here's what you can do:", 'hdn'); ?></p>
+							<h5><?php _e("Here's what you can do:", 'hdn'); ?></h5>
 							<ul> 
 								<li><?php _e('Cry to your momma about it.', 'hdn'); ?></li>
 								<li><?php printf(__('Break your monitor and hope to return to <a href="%s">home page</a>', 'hdn'), home_url()); ?></li>
-								<li><?php _e('Stab the <a href="javascript:history.back()">Back</a> of your hand to get back where you were.', 'hdn'); ?></li>
+								<li><?php _e('Slap the <a href="javascript:history.back()">Back</a> of your hand to get back where you were.', 'hdn'); ?></li>
 							</ul>
 						</div><!-- .entry-content -->
 					</article><!-- #post-0 -->

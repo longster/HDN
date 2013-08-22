@@ -2,7 +2,7 @@
 <li class="block-post small-6 medium-4 large-3 columns">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('box-post'); ?>>
 		<header class="box-entry-header">
-			<span class=""><?php the_category(',') ?></span>
+			<span class=""><?php the_category(', ') ?></span>
 			<span class="right box-entry-meta-date"><?php echo get_the_date('m.d.y'); ?></span>
 		</header><!-- .entry-header -->
 
