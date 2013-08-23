@@ -233,13 +233,6 @@ a {@extend %texttransition;}
 
 #primary {
 	padding: 0 0 2em 0;
-	blockquote {
-		border-left: 0;
-		font-size: 1.6em;
-		p {
-			font-family: Georgia, "Times New Roman", Times, serif !important;
-		}
-	}
 	.entry-title {
 		margin-bottom: .2em;
 	}
@@ -259,17 +252,24 @@ a {@extend %texttransition;}
 		}
 	}
 }
-.entry-content {
-	.format-quote & {
-		margin: 0 auto;
-		blockquote {
-			padding: 0;
-		}
+blockquote {
+	border-left: 0;
+	//font-size: 1.6em;
+	p {
+		font-family: Georgia, "Times New Roman", Times, serif !important;
 	}
 }
+//.entry-content {
+//	.format-quote & {
+//		margin: 0 auto;
+//		blockquote {
+//			padding: 0;
+//		}
+//	}
+//}
 #comments {
-	border-top: 1px solid $color-lt-gray;
-	background-color: #fff;
+	//border-top: 1px solid $color-lt-gray;
+	//background-color: #fff;
 }
 
 #sidebar {
@@ -484,6 +484,6 @@ a img.aligncenter {
 }
 .entry-meta-date {
 }
-#respond {
+#respond, #comments {
 	margin-top: 3.0em;
 }
