@@ -27,6 +27,14 @@ get_header(); ?>
     </section>
 
 
+	<section style="margin-top: 2em;">
+		<div class="row">
+            <div class="large-12 columns">
+			<?php echo adrotate_ad(2); ?>
+			</div>
+		</div>
+	</section>
+
 	<section id="primary">
 
 	<?php if ( have_posts() ) : ?>
@@ -80,6 +88,14 @@ get_header(); ?>
 
 	</section>
 
+
+	<section style="margin-top: 2em;">
+		<div class="row">
+            <div class="large-12 columns">
+			<?php echo adrotate_ad(2); ?>
+			</div>
+		</div>
+	</section>
 
 
 
