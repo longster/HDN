@@ -53,9 +53,9 @@ a {@extend %texttransition;}
 			opacity: 1;
 			background-color: transparent;
 		}
-	.tog {
-		width: 40px;
-	}
+		.tog {
+			width: 40px;
+		}
 	}	
 
 	.tog {
@@ -288,12 +288,13 @@ li:last-child.block-post {
 .box-post {
 	background: white; 
 	height: 240px; 
-	border: 1px solid #eee; 
+	//@include global-box-shadows(0px 0px 5px 0px rgba(0, 0, 0, .08));	
+	border: 1px solid #eee;
 	margin-top: 1em; 
 	margin-bottom: 1em; 
 	overflow:hidden;
 	&:hover {
-		background: #fafafa;
+		@include global-box-shadows(0px 0px 10px 0px rgba(125, 175, 40, .15));	
 	}
 }
 .box-entry-header {

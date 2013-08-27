@@ -35,7 +35,7 @@ get_header(); ?>
 	<section style="margin-top: 2em;">
 		<div class="row">
             <div class="large-12 columns">
-			<?php echo adrotate_ad(2); ?>
+			<?php echo adrotate_ad(1); ?>
 			</div>
 		</div>
 	</section>
@@ -96,7 +96,7 @@ get_header(); ?>
 	
 
 
-	<section style="margin-top: 2em;">
+	<section style="margin-bottom: 2em;">
 		<div class="row">
             <div class="large-12 columns">
 			<?php echo adrotate_ad(2); ?>

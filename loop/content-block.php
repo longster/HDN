@@ -1,5 +1,5 @@
 
-<li class="block-post small-6 medium-4 large-3 columns">
+<li class="block-post small-12 medium-4 large-3 columns">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('box-post'); ?>>
 		<header class="box-entry-header">
 			<span class=""><?php the_category(', ') ?></span>
