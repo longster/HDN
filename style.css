@@ -107,6 +107,11 @@ p#pbd-alp-load-posts { max-width: 75em; margin: 1em auto; padding-left: .9375em;
 
 #pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active { opacity: 1; }
 
+/* Advertisement blocks */
+.bannertop { margin-top: 2em; margin-bottom: 1em; }
+
+.bannerbottom { margin-bottom: 2em; }
+
 /* Wordpress standard framework */
 /* =WordPress Core
 -------------------------------------------------------------- */

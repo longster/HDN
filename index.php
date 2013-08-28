@@ -32,13 +32,15 @@ get_header(); ?>
 
 
 
-	<section style="margin-top: 2em;">
+	<?php if (function_exists('adrotate_group')) { ?>
+	<section class="ads bannertop">
 		<div class="row">
             <div class="large-12 columns">
 			<?php echo adrotate_ad(2); ?>
 			</div>
 		</div>
 	</section>
+	<?php } ?>
 
 
 	<section id="primary">
@@ -48,21 +50,30 @@ get_header(); ?>
 		<ul id="block-grid" class="row no-bullet">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'loop/content', 'block' ); ?>
-			<?php if( $wp_query->current_post == 2 ) { ?>
-				<li class="block-post small-12 medium-4 large-3 columns">
-					<article class="box-post text-center" style="background-color: #fff;">
-						<div style="border: 0px solid red; margin-top: 45px; cursor: pointer;"><?php echo adrotate_ad(1); ?></div>
+
+			<?php if (function_exists('adrotate_group')) { ?>
+			
+				<?php if( $wp_query->current_post == 2 ) { ?>
+				<li class="ads bannderside block-post small-12 medium-4 large-3 columns">
+					<article class="box-post text-center">
+						<div style="margin-top: 65px; cursor: pointer;"><?php echo adrotate_ad(1); ?></div>
+						<a href="/advertise/" style="margin: 40px 0 0 0;">Advertise with us.</a>
 					</article>
 				</li>
+				<?php } ?>
+			
+				<?php if( $wp_query->current_post == 6 ) { ?>
+					<li class="ads bannderside block-post small-12 medium-4 large-3 columns">
+						<article class="box-post text-center">
+							<span class="" style="margin: 30px 0 20px 0; display: inline-block;"><?php echo adrotate_ad(3); ?></span>
+							<span class="" style="margin: 0 0 15px 0; display: inline-block;"><?php echo adrotate_ad(4); ?></span><br/>
+							<a href="/advertise/">Advertise with us.</a>
+						</article>
+					</li>
+				<?php } ?>
+			
 			<?php } ?>
-			<?php if( $wp_query->current_post == 6 ) { ?>
-				<li class="block-post small-12 medium-4 large-3 columns">
-					<article class="box-post text-center" style="background-color: #eee;">
-						<span style="margin: 30px 0 30px 0; display: inline-block;"><?php echo adrotate_ad(3); ?></span>
-						<span><?php echo adrotate_ad(4); ?></span>
-					</article>
-				</li>
-			<?php } ?>
+		
 		<?php endwhile; ?>
 		</ul>
 	<?php else : ?>
@@ -111,13 +122,14 @@ get_header(); ?>
 	</section><!-- #primary -->
 	
 
-
-	<section style="margin-bottom: 2em;">
+	<?php if (function_exists('adrotate_group')) { ?>
+	<section class="ads bannerbottom">
 		<div class="row">
             <div class="large-12 columns">
-			<?php echo adrotate_ad(2); ?>
+			<?php echo adrotate_ad(5); ?>
 			</div>
 		</div>
 	</section>
+	<?php } ?>
 
 <?php get_footer(); ?>
