@@ -77,3 +77,38 @@
             <?php endif; ?>
         </div>
     </section>
+
+
+
+    <?php if(is_front_page() && is_home()) : ?>
+    
+    <section id="identity">
+        <div class="row">
+            <div class="large-12 columns hdn">
+                <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class="charcoal">Houston</span>Deaf<span class="charcoal">Network</span></a></h1>
+                <h5><span class="green">///</span> Your one source information where Deaf Community share News, Activities, Information and more all within local Houston!</h5>
+            </div>
+        </div>
+    </section>
+
+    <section id="submission">
+        <div class="row">
+            <div class="large-12 columns">
+                <h2><a href="<?php echo get_permalink(13133); ?>">Share Your Information With Us!</a></h2>
+                <h5>Announcements | News | Opinion | Support | Resources | Questions | Activities | Events | and more!</h5>
+            </div>
+        </div>
+    </section>
+
+    <?php elseif (is_page() || is_bbpress()) : ?>
+    
+    <section id="identity">
+        <div class="row">
+            <div class="large-12 columns hdn">
+                <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class="charcoal">Houston</span>Deaf<span class="charcoal">Network</span></a></h1>
+                <h5><span class="green">///</span> Your one source information where Deaf Community share News, Activities, Information and more all within local Houston!</h5>
+            </div>
+        </div>
+    </section>
+
+    <?php endif; ?>

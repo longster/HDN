@@ -7,6 +7,18 @@
  * @since       1.0 - 03-12-2013
  */
 ?>
+	<?php if( !is_page() || is_page('Events') ) : ?>
+	<?php if (function_exists('adrotate_group')) { ?>
+	<section class="ads bannerbottom">
+		<div class="row">
+            <div class="large-12 columns">
+			<?php echo adrotate_ad(5); ?>
+			</div>
+		</div>
+	</section>
+	<?php } ?>
+	<?php endif ; ?>
+
 	<footer id="colophon">
 		<div class="aside-footer">
 			<div class="row">
@@ -67,7 +79,7 @@
 	</script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/hdn.js"></script>
-<?php if( !is_single() && !is_page() ) : ?>
+<?php if( !is_single() && !is_page() && !is_bbpress() ) : ?>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/load-posts.js"></script>
 <?php endif; ?>
 

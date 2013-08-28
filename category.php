@@ -116,16 +116,5 @@ get_header(); ?>
 	</section>
 
 
-	<?php if (function_exists('adrotate_group')) { ?>
-	<section class="ads bannerbottom">
-		<div class="row">
-            <div class="large-12 columns">
-			<?php echo adrotate_ad(5); ?>
-			</div>
-		</div>
-	</section>
-	<?php } ?>
-
-
 
 <?php get_footer(); ?>

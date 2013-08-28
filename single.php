@@ -8,6 +8,18 @@
         </div>
     </section>
 
+
+    <?php if (function_exists('adrotate_group')) { ?>
+    <section class="ads bannertop">
+        <div class="row">
+            <div class="large-12 columns">
+            <?php echo adrotate_ad(2); ?>
+            </div>
+        </div>
+    </section>
+    <?php } ?>
+    
+
 	<section id="primary">
 		<div class="row">
 			<div class="large-1 columns">&nbsp;</div>

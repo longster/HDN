@@ -164,4 +164,14 @@ function hdn_scripts_and_styles() {
  add_action('template_redirect', 'pbd_alp_init');
 
 
+
+// Add events on the home page - Event Manager plugins
+// More info - http://wordpress.org/support/topic/plugin-events-manager-show-events-as-regular-posts-articles/page/2?replies=41
+ add_filter( 'pre_get_posts', 'my_get_posts' );
+function my_get_posts( $query ) {
+    if ( is_home() && false == $query->query_vars['suppress_filters'] )
+        $query->set( 'post_type', array( 'post', 'event' ) );
+    return $query;
+}
+
 ?>

@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php if ( !is_bbpress() ) : //do not display in forums ?> 
+    
     <header id="the-title">
         <div class="row">
             <div class="large-12 columns">
@@ -7,6 +9,20 @@
 			</div>
         </div>
     </header>
+	
+<?php elseif (is_bbpress() || is_page('Events') ) : //display only in and within forums or event page ?>
+	
+	<?php if (function_exists('adrotate_group')) { ?>
+    <section class="ads bannertop">
+        <div class="row">
+            <div class="large-12 columns">
+            <?php echo adrotate_ad(2); ?>
+            </div>
+        </div>
+    </section>
+    <?php } ?>
+    
+<?php endif ?>
 
 	<section id="primary">
 		<div class="row">
