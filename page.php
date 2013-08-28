@@ -15,7 +15,7 @@
 				<?php get_template_part( 'loop/content', 'page' ); ?>
 			<?php endwhile; // end of the loop. ?>
 		
-				<?php comments_template( '', true ); ?>
+				<?php /* comments_template( '', true ); */ ?>
 			</div>
 
 			<aside id="sidebar" class="large-4 columns">

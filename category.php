@@ -30,7 +30,7 @@ get_header(); ?>
 	<section style="margin-top: 2em;">
 		<div class="row">
             <div class="large-12 columns">
-			<?php echo adrotate_ad(1); ?>
+			<?php echo adrotate_ad(2); ?>
 			</div>
 		</div>
 	</section>
@@ -41,6 +41,16 @@ get_header(); ?>
 		<ul id="block-grid" class="row no-bullet">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'loop/content', 'block' ); ?>
+			<?php if( $wp_query->current_post == 2 ) { ?>
+				<li class="block-post small-12 medium-4 large-3 columns">
+					<article class="box-post">AD CODE ONE</article>
+				</li>
+			<?php } ?>
+			<?php if( $wp_query->current_post == 6 ) { ?>
+				<li class="block-post small-12 medium-4 large-3 columns">
+					<article class="box-post">AD CODE TWO</article>
+				</li>
+			<?php } ?>
 		<?php endwhile; ?>
 		</ul>
 	<?php else : ?>

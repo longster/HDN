@@ -23,7 +23,7 @@ get_header(); ?>
     <section id="submission">
         <div class="row">
             <div class="large-12 columns">
-                <h2><a href="">Share Your Information With Us!</a></h2>
+                <h2><a href="<?php echo get_permalink(13133); ?>">Share Your Information With Us!</a></h2>
                 <h5>Announcements | News | Opinion | Support | Resources | Questions | Activities | Events | and more!</h5>
             </div>
         </div>
@@ -35,7 +35,7 @@ get_header(); ?>
 	<section style="margin-top: 2em;">
 		<div class="row">
             <div class="large-12 columns">
-			<?php echo adrotate_ad(1); ?>
+			<?php echo adrotate_ad(2); ?>
 			</div>
 		</div>
 	</section>
@@ -43,10 +43,26 @@ get_header(); ?>
 
 	<section id="primary">
 
+
 	<?php if ( have_posts() ) : ?>
 		<ul id="block-grid" class="row no-bullet">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'loop/content', 'block' ); ?>
+			<?php if( $wp_query->current_post == 2 ) { ?>
+				<li class="block-post small-12 medium-4 large-3 columns">
+					<article class="box-post text-center" style="background-color: #fff;">
+						<div style="border: 0px solid red; margin-top: 45px; cursor: pointer;"><?php echo adrotate_ad(1); ?></div>
+					</article>
+				</li>
+			<?php } ?>
+			<?php if( $wp_query->current_post == 6 ) { ?>
+				<li class="block-post small-12 medium-4 large-3 columns">
+					<article class="box-post text-center" style="background-color: #eee;">
+						<span style="margin: 30px 0 30px 0; display: inline-block;"><?php echo adrotate_ad(3); ?></span>
+						<span><?php echo adrotate_ad(4); ?></span>
+					</article>
+				</li>
+			<?php } ?>
 		<?php endwhile; ?>
 		</ul>
 	<?php else : ?>
