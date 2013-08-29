@@ -26,7 +26,7 @@
 
 	<section id="primary">
 		<div class="row">
-			<div class="large-8 columns">
+			<div class="large-9 columns">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'loop/content', 'page' ); ?>
 			<?php endwhile; // end of the loop. ?>
@@ -34,7 +34,7 @@
 				<?php /* comments_template( '', true ); */ ?>
 			</div>
 
-			<aside id="sidebar" class="large-4 columns">
+			<aside id="sidebar" class="large-3 columns">
 					<?php get_sidebar(); ?>
 			</aside>	
 		</div>

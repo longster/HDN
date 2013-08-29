@@ -210,9 +210,9 @@ a {@extend %texttransition;}
 	text-transform: uppercase;
 	h1 {
 		font-size: 4.0em;
-		background: url(img/nav-toggle.png) no-repeat 4.1111% center;
+		//background: url(img/nav-toggle.png) no-repeat 4.1111% center;
 		padding-bottom: .15em;
-		padding-left: 8.33333%;
+		//padding-left: 8.33333%;
 		margin-bottom: 0;
 		margin-top: 0;
 	}
@@ -275,9 +275,16 @@ blockquote {
 #sidebar {
 	margin-bottom: 0;
 	border-right: 0;
-	padding-top: 1.8em;
-	padding-bottom: 1.8em;
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
 	height: 10%;
+	.widget_adrotate_widgets {
+		text-align: center;
+		padding: 10px 0;
+		margin: 0 0 15px 0;
+		background-color: #fff;
+		border: 1px solid $color-lt-gray;
+	}
 }
 
 
@@ -288,7 +295,6 @@ li:last-child.block-post {
 .box-post {
 	background: white; 
 	height: 240px; 
-	//@include global-box-shadows(0px 0px 5px 0px rgba(0, 0, 0, .08));	
 	border: 1px solid #eee;
 	margin-top: 1em; 
 	margin-bottom: 1em; 

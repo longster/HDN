@@ -1,7 +1,4 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="row">
-			<div class="large-12 columns">
-
 			<header class="entry-header">
 			<?php if ( is_single() ) : ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -65,8 +62,6 @@
 			</footer><!-- .entry-meta -->
 			<?php endif; ?>
 
-			
-			</div>
-		</div>
+		
 
 	</article><!-- #post -->

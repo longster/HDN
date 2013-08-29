@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <?php elseif (is_page() || is_bbpress()) : ?>
+    <?php /*elseif (is_page() || is_bbpress()) : ?>
     
     <section id="identity">
         <div class="row">
@@ -109,6 +109,6 @@
                 <h5><span class="green">///</span> Your one source information where Deaf Community share News, Activities, Information and more all within local Houston!</h5>
             </div>
         </div>
-    </section>
+    </section */ ?>
 
     <?php endif; ?>

@@ -22,8 +22,7 @@
 
 	<section id="primary">
 		<div class="row">
-			<div class="large-1 columns">&nbsp;</div>
-			<div class="large-8 columns">
+			<div class="large-9 columns">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'loop/content', get_post_format() ); ?>
 				<?php endwhile; // end of the loop. ?>
