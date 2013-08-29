@@ -14,7 +14,7 @@ function hdn_css_style()
 	// Main & Custom stylesheet
 	wp_register_style( 'hdn-stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), '', 'all' );
 	
-	wp_enqueue_style( 'hdn-normalize-stylesheet' );
+	// wp_enqueue_style( 'hdn-normalize-stylesheet' );
 	wp_enqueue_style( 'hdn-foundation-stylesheet' );
 	wp_enqueue_style( 'hdn-stylesheet' );
 	

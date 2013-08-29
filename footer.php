@@ -60,18 +60,18 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.abide.js"></script>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.alerts.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.clearing.js"></script>	
+	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.clearing.js"></script */ ?>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.cookie.js"></script>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.dropdown.js"></script>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.forms.js"></script>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.interchange.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.joyride.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.magellan.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.orbit.js"></script>	
+	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.joyride.js"></script */ ?>	
+	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.magellan.js"></script */ ?>	
+	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.orbit.js"></script */ ?>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.placeholder.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.reveal.js"></script>	
+	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.reveal.js"></script */ ?>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.section.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script>	
+	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script */ ?>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.topbar.js"></script>
 	
 	<script>

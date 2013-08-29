@@ -126,7 +126,7 @@ function hdn_scripts_and_styles() {
  
     // Add code to index pages.
     if( !is_singular() ) {  
-        // Queue JS and CSS
+        // Queue JS
         wp_enqueue_script(
             'pbd-alp-load-posts',
             plugin_dir_url( __FILE__ ) . 'js/load-posts.js',
@@ -135,13 +135,14 @@ function hdn_scripts_and_styles() {
             true
         );
         
-        wp_enqueue_style(
-            'pbd-alp-style',
-            plugin_dir_url( __FILE__ ) . 'style.css',
-            false,
-            '1.0',
-            'all'
-        );
+        // Queue CSS
+        //wp_enqueue_style(
+        //    'pbd-alp-style',
+        //    plugin_dir_url( __FILE__ ) . 'style.css',
+        //    false,
+        //    '1.0',
+        //    'all'
+        //);
         
     
         
