@@ -234,6 +234,7 @@ a.navbar-brand {
    img.avatar {
       &:extend(.radius-circle, .shadows);
       border: 2px solid #fff;
+      margin-top: -5px;
    }
 }
 #author-description {
@@ -361,7 +362,7 @@ div#user-submitted-posts fieldset {
       font-size: 16px;
    }
    textarea {
-      width:100%;
+      width:100% !important;
    }
 }
 div#usp-submit {
@@ -372,13 +373,21 @@ div.usp-input-error {
    color: #fff;
    text-align: left;
    padding: .5em;
+   width:100%;
 }
 .wp-editor-container {
    border: 1px solid #ddd;
 }
+
+#usp-upload-message{
+   display: none;
+}
+
 div#user-submitted-image {
-   margin: 1.2em 0;
-   width: 100%;
+   margin: 0;
+   width: 100% !important;
+   clear: none;
+   margin-top: 0;
 }
 
 
@@ -413,8 +422,22 @@ ol.commentlist {
    }
    .odd {
    }
+   .comment-body p {
+      clear:both;
+   }
    .avatar {
       &:extend(.radius-circle, .shadows);
+   }
+   .comment-author {
+      display:inline-block;
+      margin-bottom: 10px;
+   }
+   .says {
+      display: none;
+   }
+   .comment-meta {
+      margin-top: 4px;
+      margin-bottom: 10px;
    }
    ul.children {
       margin-top: 2em;
@@ -616,19 +639,39 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
    }
    div#user-submitted-posts fieldset {
       label {
-         width: 20%;
+         width: 20% !important;
       }
-      input.usp-input, select, textarea {
+      input.usp-input, 
+      select, 
+      textarea,
+      #user-submitted-image {
          width:80% !important;
+         float: left;
+      }
+      textarea {
+         margin-bottom: 10px;
+      }
+      #user-submitted-image {
+         margin-top:-5px;
       }
    }
-   div#usp-submit {
-      padding-left: 20%;
+   div.usp-input-error {
+      width:80%;
+   }
+   div#usp-submit, .usp-content .usp-input-error {
+      margin-left: 20%;
    }
 
    ol.commentlist {
       ul.children {
          padding-left: 1.5em;
+      }
+      .comment-author {
+         float:left;
+      }
+      .comment-meta {
+         display: inline-block;
+         float: right;
       }
    }
    #colophon {

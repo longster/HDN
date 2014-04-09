@@ -104,10 +104,10 @@
 		            <h5>Announcements | News | Opinion | Support | Resources | Questions | Activities | Events | and more!</h5>
 		            <div class="row submit">
 		            	<div class="col-md-2 col-md-offset-3">
-		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-posts-with-us/submit-articles/">Share News</a>
+		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-posts-with-us/submit-news/">Share News</a>
 		            	</div>
 		            	<div class="col-md-2">
-		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-posts-with-us/submit-events/">Share Events</a>
+		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-posts-with-us/submit-activities/">Share Events</a>
 		            	</div>
 		            	<div class="col-md-2">
 		            		<a class="btn btn-primary btn-block" href="http://localhost/directory/?action=submitlisting">Add Directory</a>
