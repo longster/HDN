@@ -1,8 +1,28 @@
-/* Foundation was made by ZURB, an interaction design and design strategy firm in Campbell, CA */
-/* zurb.com */
-/* humanstxt.org */
+/* WPReboot is a versatile HTML5 responsive WordPress framework based on Bootstrap 3.0. */
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: jQuery, Orbit, Reveal
-  Software: Coda, Textmate, Git
+/* TEAM */
+
+Long Duong
+http://wpreboot.lduong.com
+WPReboot Framework: http://wpreboot.lduong.com
+
+
+/* THANKS */							
+
+Bootstrap
+http://getbootstrap.com/
+
+HTML5 Boilerplate
+http://html5boilerplate.com/
+
+Roots
+http://www.rootstheme.com/
+
+Reveire
+http://themefortress.com/reverie/
+
+/* SITE */           
+    
+Standards: HTML5, CSS3              
+Components: Modernizr, jQuery, etc.
+CMS: WordPress

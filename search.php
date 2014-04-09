@@ -1,61 +1,37 @@
 <?php get_header(); ?>
 
-	<section id="the-title">
-        <div class="row">
-            <div class="large-12 columns">
-                <header class="page-header">
-					<h1 class="page-title">
-						<?php printf( __( 'Search Results for: %s', 'hdn' ), '<span>' . get_search_query() . '</span>' ); ?>
-					</h1>
-				</header><!-- .page-header -->
-            </div>
-        </div>
-    </section>
-
-	<section id="primary">
-
+<section id="content">
+	<div class="container">	
 		<div class="row">
-			<div class="large-8 columns">
-			<?php if ( have_posts() ) : ?>
-
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'loop/content', get_post_format() ); ?>
-				<?php endwhile; ?>
-
-
-				<?php /* Display navigation to next/previous pages when applicable */ ?>
-				<?php if ( function_exists('hdn_pagination') ) { hdn_pagination(); } else if ( is_paged() ) { ?>
-					<nav id="post-nav">
-						<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'hdn' ) ); ?></div>
-						<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'hdn' ) ); ?></div>
-					</nav>
-				<?php } ?>	
-			</div>
-
-			<aside id="sidebar" class="large-4 columns">
-					<?php get_sidebar(); ?>
-			</aside>
-
-			<?php else : ?>
-
-				<article id="post-0" class="post no-results not-found">
-					<div class="large-12 columns">
-						<header class="entry-header">
-							<h1 class="entry-title"><?php _e( 'Nothing Found', 'hdn' ); ?></h1>
-						</header>
-
-						<div class="entry-content">
-							<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'hdn' ); ?></p>
-							<?php get_search_form(); ?>
-						</div><!-- .entry-content -->
-
-					</div><!-- .large-12.columns -->
-				</article><!-- #post-0 -->
-			<?php endif; ?>
+			<div class="col-md-8 col-lg-9">
 		
-		</div>
+			<?php if ( have_posts() ) : ?>
+	
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( '/modules/content', get_post_format() ); ?>
+				<?php endwhile; ?>
+		
+			<?php else : ?>
+			
+				<?php get_template_part( '/modules/content', 'none' ); ?>
+		
+			<?php endif; // end have_posts() check ?>
+	
+			<?php /* Display navigation to next/previous pages when applicable */ ?>
+			<?php if ( function_exists('hdn_pagination') ) { hdn_pagination(); } elseif ( is_paged() ) { ?>
+			<nav id="post-nav">
+				<div class="previous"><?php next_posts_link( __( '&larr; Older posts', 'hdn' ) ); ?></div>
+				<div class="next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'hdn' ) ); ?></div>
+			</nav>
+			<?php } ?>
+		
+			</div><!-- .col-md-8 -->
 
-	</section><!-- .content -->
+			<?php get_sidebar(); ?>
+			
+		</div><!-- .row -->
+	</div>
+</section><!-- #content .container -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

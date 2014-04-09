@@ -1,89 +1,89 @@
-<?php
-/**
- * Footer
- *
- * @author      Longster
- * @package     hdn
- * @since       1.0 - 03-12-2013
- */
-?>
-	<?php if( !is_page() || is_page('Events') ) : ?>
-	<?php if (function_exists('adrotate_group')) { ?>
-	<section class="ads bannerbottom">
+<footer id="colophon">
+	<div class="container">
 		<div class="row">
-            <div class="large-12 columns">
-			<?php echo adrotate_ad(5); ?>
-			</div>
-		</div>
-	</section>
-	<?php } ?>
-	<?php endif ; ?>
 
-	<footer id="colophon">
-		<div class="aside-footer">
-			<div class="row">
-				<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
-						Configure at Dashboard > Appearance > Widget > Footer
-		        <?php endif; ?>
+			<?php/* if (function_exists('adrotate_group') && !is_page() ) { ?>
+	        <div class="adblock">
+	        	<?php echo adrotate_ad(2); ?>
+	        </div>
+			<?php } */?>
+
+			<div class="col-md-12 text-center">
+				<h2>Together We Stand, Divided We Fall...</h2>
 			</div>
 		</div>
-		
-		<div class="credit">
+	</div>
+	<div class="aside-footer">
+		<div class="container">
 			<div class="row">
-				<div class="large-12 columns">
-					<small><?php hdn_credits(); ?></small>
-	                <?php
-	                    wp_nav_menu( array(
-	                        'theme_location' => 'footer-menu',
-	                        'container' => false,
-	                        'depth' => 0,
-	                        'items_wrap' => '<ul class="right inline-list">%3$s</ul>',
-	                        'fallback_cb' => 'hdn_menu_fallback', // workaround to show a message to set up a menu
-	                    	'walker' => new hdn_walker( array(
-	                            'in_top_bar' => false,
-	                            'item_type' => 'li'
-	                        ) ),
-	                    ) );
-	                ?>
+			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer')) : ?>
+				<div class="col-md-12">
+					<p>Configure at Dashboard > Appearance > Widget > Footer</p>
+					<p>Archives, Categories, Tags, Forums List, Partners, Network, Authors, etc...</p>
+				</div>
+		    <?php endif; ?>
+			</div>
+			<div class="row">
+			<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer-Company')) : ?>
+				<div class="col-md-12 hide">
+					<p>Configure at Dashboard > Appearance > Widget > Footer-Company</p>
+				</div>
+				<?php /* 
+				<div class="col-md-8">
+					<a href="#">ECHODE logo here...</a>
+					<p>HDN is made by <a href="#">ECHODE</a> (formely known as BE7A, LLC), based in Houston, Texas. We've put more than 10 years in experience building web products, services and websites into this framework.</p>
+				</div>
+				<div class="col-md-2">
+					<h5>Title</h5>
+					<ul class="list-unstyled">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Echode</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Advertisements</a></li>
+						<li><a href="#">Disclaimer &amp; Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-2">
+					<h5>Title</h5>
+					<ul class="list-unstyled">
+						<li><a href="#">Contribute &amp; Submissions</a></li>
+						<li><a href="#">Events &amp; Activities</a></li>
+						<li><a href="#">Articles &amp; News</a></li>
+						<li><a href="#">Job Listing</a></li>
+						<li><a href="#">Directory</a></li>
+					</ul>
+				</div>
+				*/ ?>
+		    <?php endif; ?>
+			</div>
+		</div>
+	</div>
+	<div class="container credit">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+		            <?php wp_nav_menu( array(
+						'theme_location'	=>	'footer',
+						'menu_class'		=>	'list-inline',
+						'depth'				=>	2,
+						'fallback_cb'		=>	'hdn_menu_fallback',
+						'walker'			=>	new hdn_Nav_Walker,
+					) );  ?>
+					</div>
+					<div class="col-md-12">
+						<?php hdn_credits(); ?>
+					</div>
 				</div>
 			</div>
+			<div class="col-md-6 text-right">
+				<p>Social links</p>
+			</div>
 		</div>
-	</footer>
+	</div>
+</footer>
 
-
-	<script>
-		document.write('<script src=' +
-		('__proto__' in {} ? '<?php bloginfo( 'template_url' );?>/js/vendor/zepto' : '<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/jquery') +
-		'.js><\/script>')
-	</script>
-
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.js"></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.abide.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.alerts.js"></script>	
-	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.clearing.js"></script */ ?>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.cookie.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.dropdown.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.forms.js"></script>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.interchange.js"></script>	
-	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.joyride.js"></script */ ?>	
-	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.magellan.js"></script */ ?>	
-	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.orbit.js"></script */ ?>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.placeholder.js"></script>	
-	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.reveal.js"></script */ ?>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.section.js"></script>	
-	<?php /* script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script */ ?>	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/foundation/foundation.topbar.js"></script>
-	
-	<script>
-		$(document).foundation();
-	</script>
-
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/hdn.js"></script>
-<?php if( !is_single() && !is_page() && !is_bbpress() ) : ?>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/load-posts.js"></script>
-<?php endif; ?>
-
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>

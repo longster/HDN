@@ -1,49 +1,32 @@
 <?php get_header(); ?>
-    
-    <section class="catTitle">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1><?php the_category(', '); ?></h1>
-            </div>
-        </div>
-    </section>
 
-
-    <?php if (function_exists('adrotate_group')) { ?>
-    <section class="ads bannertop">
-        <div class="row">
-            <div class="large-12 columns">
-            <?php echo adrotate_ad(2); ?>
-            </div>
-        </div>
-    </section>
-    <?php } ?>
-    
-
-	<section id="primary">
+<section id="content">
+	<div class="container">	
 		<div class="row">
-			<div class="large-9 columns">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'loop/content', get_post_format() ); ?>
-				<?php endwhile; // end of the loop. ?>
+			<div class="col-md-8 col-lg-9">
+		
+			<?php while (have_posts()) : the_post(); ?>
+				<?php get_template_part( '/modules/content', get_post_format() ); ?>
+			<?php endwhile; // End the loop ?>
 
-				<div id="authorbox">  
-					<h4>About <?php the_author_posts_link(); ?></h4>  
-					<?php if (function_exists('get_avatar')) { echo get_avatar(get_the_author_email(), '85', 'http://www.houstondeafnetwork.com/wp-content/themes/HDN_v1/images/gravatar_contributors.png' ); }?><small class="hidden">Contact the <a href="mailto:<?php the_author_email(); ?>">Author</a></small>
-					<div class="authortext">  
-						<p><?php the_author_description(); ?></p>  
-					</div>
-				</div> 
+		    <!-- Related articles and 2 block of ad placement -->
+			<?php get_template_part( '/modules/related-posts' ); ?>
 
-				<?php comments_template( '', true ); ?>
-			</div>
+			<?php /*
+		    <nav id="nav-single" class="pager">
+	            <span class="next"><?php next_post_link( '%link', sprintf( '%1$s <span class="meta-nav">&rarr;</span>', __( 'Next Post', 'wpbootstrap' ) ) ); ?></span>
+	            <span class="previous"><?php previous_post_link( '%link', sprintf( '<span class="meta-nav">&larr;</span> %1$s', __( 'Previous Post', 'wpbootstrap' ) ) ); ?></span>
+		    </nav><!-- #nav-single -->
+			*/ ?>
+			
+		    <?php comments_template( '', true ); ?>
+		
+			</div><!-- .col-md-8 -->
 
-			<aside id="sidebar" class="large-3 columns">
-				<?php get_sidebar(); ?>
-			</aside>
-
-		</div>
-	</section>
-
+			<?php get_sidebar(); ?>
+			
+		</div><!-- .row -->
+	</div>
+</section><!-- #content .container -->
 
 <?php get_footer(); ?>

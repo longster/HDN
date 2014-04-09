@@ -1,0 +1,677 @@
+/*!
+Theme Name:         HDN
+Theme URI:          http://houstondeafnetwork.com
+Description:        
+Version:            3.1.1
+Author:             Long Duong
+Author URI:         http://lduong.com/
+License:            MIT License
+License URI:        http://www.opensource.org/licenses/mit-license.php
+*/
+
+@import "../custom/skin-bootstrap.less";  
+
+/* ==========================================================================
+   Extra small devices (phones, up to 480px) 
+   ========================================================================== */
+
+/* Temporary Fix for IE viewport - http://timkadlec.com/2013/01/windows-phone-8-and-device-width/ */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+
+
+/* Base & Variables */
+@skin-primary:    #fff; //d86045
+@skin-secondary:  #fff;
+@skin-dark:       #3a3a3a;
+@skin-subtle:     #fafafa;
+a, :hover, :focus {
+   -webkit-transition: all 500ms ease;
+   -moz-transition: all 500ms ease;
+   -ms-transition: all 500ms ease;
+   -o-transition: all 500ms ease;
+   transition: all 500ms ease;
+}
+a {
+   &:hover {
+      text-decoration: none;
+   }
+}
+.radius-circle {
+   -webkit-border-radius: 1000px;
+   border-radius: 1000px;
+}
+.shadows {
+   -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+   box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+}
+html {background-color: @skin-dark;}
+body {
+   background-color: transparent;
+}
+
+
+
+/* Header */
+.navbar {
+   border-radius: 0;
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   margin-bottom: 0;
+   .fallback {
+      text-align: left;
+      display: inline-block;;
+      padding: 11px 0 11px 15px;
+      float: left;
+   }
+}
+a.navbar-brand {
+   text-indent: -10000px;
+   overflow: hidden;
+   background: url(assets/img/logo-hdn-black-sm.png) no-repeat transparent;
+   background-position: 19px 10px;
+   width: 75px;
+   opacity: .8;
+   border-right: 1px solid @gray-lighter;
+   &.active {
+      opacity: 1;
+      &:hover {
+         opacity: .8;
+      }
+   }
+   &:hover {
+      opacity: 1;
+   }
+}
+.navbar-default .navbar-nav>li> {
+   a:hover {
+      color: @brand-primary;
+   }
+   .dropdown-menu {
+      right: 0;
+      left: auto;
+   }
+}
+.navbar-collapse {
+   border-bottom: 1px solid;
+}
+.search-highlight {
+   background-color: @brand-primary;
+   padding-left: 5px;
+   padding-right: 5px;
+   color: #fff;
+}
+#identity {
+   background-color: @skin-subtle;
+   padding: 0em 0 1.75em;
+      img {
+         width: 100%;
+      }
+      h1 {
+         font-size: 2.15em;
+         margin-bottom: 0;
+         line-height: .9em;
+         a {
+            text-decoration: none;
+            span {
+               color: @skin-dark;
+            }  
+         }
+      }
+      h5 {
+         font-size: 1.15em;
+         span {
+            color: @brand-primary;
+         }
+      }
+}
+#submission {
+   background-color: @skin-primary;
+   border-top: 1px solid @gray-lighter;
+   border-bottom: 1px solid @gray-lighter;
+   padding: .25em 0 1.25em;
+   h2 {
+      font-size: 1.35em;
+   }
+   h5 {
+      font-size: 1.15em;
+      margin-bottom: 1.2em;
+   }
+   a {
+      &:hover {
+         text-decoration: none;
+      }
+   }
+   .submit a {
+      margin-bottom: 1.2em;
+   }
+}
+.featured {
+   background-color: @skin-subtle;
+   padding: 1em 0 2em;
+   .sticky-post {
+      padding: 1px 15px 5px;
+      margin-bottom: 0;
+   }
+}
+
+
+
+/* Content */
+.page-header {
+   padding: 10px 0 20px;
+   .entry-title a {
+      color: @skin-dark;
+      &:hover {
+         color: @brand-primary;
+      }
+   }
+}
+.page-header,
+#content {
+   margin: 0;
+   background-color: @navbar-default-bg;
+} 
+#content {
+   padding: 2em 0;
+}
+
+
+/* Box post for index & categories */
+.row.list-unstyled {
+   margin-bottom: 0;
+}
+.thumbnail {
+   background: white; 
+   padding:0;
+   border:0;
+   border-radius: 0;
+   -webkit-box-shadow: 0 1px 0 0 @gray-lighter;
+   box-shadow: 0 1px 0 0 @gray-lighter;
+   margin-top: 0em; 
+   margin-bottom: 1px; 
+   &:hover {
+      //background: green; 
+      -webkit-box-shadow: 0 1px 10px 0 @gray-lighter;
+      box-shadow: 0 1px 10px 0 @gray-lighter;
+   }
+   .box-entry-header {
+      display: block;
+      border-bottom: 1px solid @gray-lighter;
+      padding: 5px 10px;
+      overflow: hidden;
+      height: 30px;
+   }
+   a.box-entry-title {
+      padding: 10px 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+      display: block;
+      font-size: 1.6em;
+      color: @skin-dark;
+      &:hover {
+         color: @brand-primary;
+      }
+   }
+   .box-entry-meta {
+      padding: 15px 10px 5px;
+      .box-entry-meta-date {
+         color: @gray-lighter;
+      }
+   }
+}
+
+ 
+/* Author */
+#author-info {
+   margin-top: 2em;
+   margin-bottom: 1.75em;
+   img.avatar {
+      &:extend(.radius-circle, .shadows);
+      border: 2px solid #fff;
+   }
+}
+#author-description {
+   h3 {
+   padding-top: .5em;
+   border-top: 1px dotted @gray-lighter;
+   }
+   img {
+      margin-right: 5px;
+   }
+   #author-link {
+      padding-top: 1em;
+      padding-bottom: 1.25em;
+      border-bottom: 1px dotted @gray-lighter;
+   }
+}
+
+/* Single, Page */
+.relatedposts {
+   margin-bottom: 2em;
+}
+#nav-single {
+   padding: 1.5em 0;
+   margin: 3.5em 0;
+   border-top: 1px solid @gray-lighter;
+   border-bottom: 1px solid @gray-lighter;
+}
+.entry-meta {
+   padding: 5px 0;
+   margin: 1.1em 0;
+   color: #ddd;
+}
+ul.page-numbers li .page-numbers.current {
+   color: @skin-dark;
+}
+
+
+
+/* Sidebar */
+#sidebar {
+   img {width: 100%;}
+   .widget {
+      margin-bottom: 2em;
+   }
+   ul {
+       &:extend(.list-unstyled);
+   }
+}
+
+
+/* Adrotate style */
+.adblock {
+   margin: 1em 0;
+   text-align: center;
+}
+.adblock-post {
+   background: @skin-primary;
+   border: 1px solid @skin-subtle;
+   margin: 0 0 10px;
+   padding: 20px 0; 
+   display: block;
+   text-align: center;
+}
+.adblock-single {
+   background: @skin-primary;
+   border: 1px solid @skin-subtle;
+   margin: 0 0 5px 5px;
+   padding: 10px 0; 
+   display: inline-block;
+   text-align: center;   
+   float: right;
+}
+.ads {
+   height: 165px; 
+   overflow: hidden;
+}
+
+
+
+/* Load Post Style */
+#pbd-alp-load-posts {
+   margin: 1em auto;
+   a {
+      -webkit-border-radius: @border-radius-base;
+      border-radius: @border-radius-base;
+   }
+}
+#pbd-alp-load-posts a:link, #pbd-alp-load-posts a:visited {
+   display: block;
+   text-align: center;
+   padding: 4px 0;
+   color: @skin-primary;
+   text-decoration: none;
+   background-color: @brand-primary;
+   opacity: .7;
+}
+
+#pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active {
+   opacity: 1;
+}
+
+
+
+/* 
+   User Submitted Posts - CSS for HTML5 form
+   http://perishablepress.com/user-submitted-posts/
+   Complete list of CSS hooks for the submission form @ http://m0n.co/e
+*/
+div#user-submitted-posts fieldset {
+   margin-bottom: 1.6em; 
+   label {
+      padding: .25em 0;
+   }
+   input.usp-input {
+      width:100%;
+      border: 1px solid #ddd;
+      padding: .25em .5em;
+      &.usp-clone {
+         padding: .75em;
+      }
+   }
+   select {
+      width: 100%;
+      margin-top: .15em;
+      font-size: 16px;
+   }
+   textarea {
+      width:100%;
+   }
+}
+div#usp-submit {
+   padding-left: 0;
+}
+div.usp-input-error {
+   background-color: #d9534f;
+   color: #fff;
+   text-align: left;
+   padding: .5em;
+}
+.wp-editor-container {
+   border: 1px solid #ddd;
+}
+div#user-submitted-image {
+   margin: 1.2em 0;
+   width: 100%;
+}
+
+
+/* Events Manager Plugin */
+
+
+/* Business Directory Plugin */
+
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* Comment Section */
+#comments {
+   border-top: 2px solid @gray-lighter;
+   padding-top: .4em;
+   padding-bottom: .5em;
+   margin-bottom: 0;
+   border-bottom: 1px dotted @gray-lighter;
+}
+ol.commentlist {
+   list-style-type: none; 
+   padding-left: 0;
+   .comment {
+      padding: 1.5em;
+      border-bottom: 1px solid @gray-lighter;
+   }
+   .even {
+      background: @skin-primary;
+   }
+   .odd {
+   }
+   .avatar {
+      &:extend(.radius-circle, .shadows);
+   }
+   ul.children {
+      margin-top: 2em;
+      padding-left: 0em;
+      list-style-type: none;
+      li {
+         list-style: none;
+      }
+   }
+}
+#respond {
+   textarea {
+      width: 100%;
+      border: 1px solid @gray-lighter;
+   }
+}
+
+
+
+/* Footer */
+#colophon {
+   padding-top: 1.5em;
+   padding-bottom: 30px;
+   border-top: 1px solid darken(@skin-dark, 5%);
+   -webkit-box-shadow:inset 0 1px 0 0 lighten(@skin-dark, 25%);;
+   box-shadow:inset 0 1px 0 0 lighten(@skin-dark, 25%);;
+   color: lighten(@skin-dark, 15%);
+   h2 {
+      padding-bottom: 1em;
+      font-size: 40px;
+   }
+   a {
+      color: lighten(@skin-dark, 15%);
+      &:hover {
+         color: darken(@brand-primary, 15%);
+      }
+   }
+   .aside-footer {
+      background-color: darken(@skin-dark, 5%);
+      border-top: 1px solid lighten(@skin-dark, 5%);
+      border-bottom: 1px solid lighten(@skin-dark, 5%);
+      margin-bottom: 1em;
+      .row {
+         margin-top: 2.5em;
+         margin-bottom: 2.5em;
+      }
+      .widget-title {
+         font-size: 14px;
+         font-weight: bold;
+         border-bottom: 1px solid #474747;
+         padding-bottom: 4px;
+         margin-bottom: 4px;
+      }
+   }
+   aside ul{
+       &:extend(.list-unstyled);
+   }
+   .col-md-6 .col-md-12,
+   .col-md-6.text-right {
+      &:extend(.text-center);
+   }
+
+}
+
+
+
+/* WordPress Generated Classes - See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes */
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
+
+
+
+
+/* ==========================================================================
+   Small devices (tablets, 768px and up)
+   ========================================================================== */
+
+@media (min-width: @screen-sm) {
+   .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+   }
+   .navbar {
+      .fallback {
+      }
+   }
+   a.navbar-brand {
+      //margin-left: 0px !important;
+      background-position: 27px 10px;
+   }
+   .navbar-nav {
+      a {
+         border-right: 1px solid @gray-lighter;
+      }
+   }
+   .nav .open>a,.nav .open>a:hover, .nav .open>a:focus {
+      border-color: @gray-lighter;
+   }
+   .navbar-collapse {
+      border-bottom: 0px;
+   }
+   .navbar-form {
+      padding:0;
+      margin:0;
+      .glyphicon {
+         left: 30px;
+         top: 3px;
+      }
+      .form-control {
+         background-color: @skin-subtle;
+         width: 150px;
+         margin-right:-15px;
+         padding-left: 35px;
+         padding-right: 0;
+         height: @navbar-height;
+         border-left: 1px solid @gray-lighter;
+         border-top: 0;
+         border-right: 0;
+         border-bottom: 0;
+         border-radius: 0;
+         -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0.075);
+         box-shadow: inset 0 0px 0px rgba(0,0,0,0.075);
+         -webkit-transition: all 800ms ease;
+         -moz-transition: all 800ms ease;
+         -ms-transition: all 800ms ease;
+         -o-transition: all 800ms ease;
+         transition: all 800ms ease;
+         &:hover {
+            background-color: @skin-primary;
+            width: 250px;
+         }
+         &:focus {
+            -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0 0px 0px rgba(0,0,0,.075), 0 0 0px rgba(102, 175, 233, 0.6);
+            border: 0;
+         }
+      }
+   }
+   .sharepost {
+      margin-right: -20px !important;
+      a {
+         border-right: 0;
+         border-left: 1px solid #eee;
+         background-color: @brand-primary;
+         color: #fff !important;
+         &:hover {
+            background-color: darken(@brand-primary, 5%) !important;
+         }
+      }
+   }
+   #identity {
+      h1 {
+         font-size: 5.25em;
+      }
+      h5 {
+         font-size: 1.25em;
+      }
+   }
+   #submission {
+      h2 {
+         font-size: 3.25em;
+      }
+      h5 {
+         font-size: 1.15em;
+      }
+   }
+
+   .featured {
+      .sticky-post {
+         padding: 5px 25px 25px;
+      }
+   }
+   .page-header {
+      .entry-title {
+         font-size: 3em;
+      }
+   }
+   #content {
+      h1 {
+         font-size: 3em;
+      }
+   }
+   .thumbnail {
+      margin-top: 1em; 
+      margin-bottom: 1em; 
+      border-radius: @border-radius-base;
+      a.box-entry-title {
+         margin-top: 0;
+         padding: 5px 10px;
+         height: 95px;
+         vertical-align: middle;
+         display: block;
+         overflow: hidden;
+         font-size: 1.5em;
+      }
+   }
+   div#user-submitted-posts fieldset {
+      label {
+         width: 20%;
+      }
+      input.usp-input, select, textarea {
+         width:80% !important;
+      }
+   }
+   div#usp-submit {
+      padding-left: 20%;
+   }
+
+   ol.commentlist {
+      ul.children {
+         padding-left: 1.5em;
+      }
+   }
+   #colophon {
+      .col-md-6 .col-md-12  {
+         text-align: inherit;
+      }
+      .col-md-6.text-right {
+         text-align: right;
+      }
+   }
+}
+
+
+
+/* ==========================================================================
+   Medium devices (desktops, 992px and up)
+   ========================================================================== */
+
+@media (min-width: @screen-md) { 
+   #identity {
+      img {
+         width: inherit;
+      }
+      h1 {
+         font-size: 7em;
+      }
+   }
+   .home #content {
+      h2 {
+         font-size: 48px;
+      }
+      h3 {
+         font-size: 30px;
+         margin-top: 0;
+      }
+   }
+}
+
+
+
+/* ==========================================================================
+   Large devices (large desktops, 1200px and up) 
+   ========================================================================== */
+
+@media (min-width: @screen-lg) {
+}
