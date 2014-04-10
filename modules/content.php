@@ -21,7 +21,7 @@
 	<?php endif; ?>
 	</header>
 
-<?php if ( is_search()  ) : //|| is_category() || is_tag() Only display excerpts for search ?>
+<?php if ( is_search() ) : ?>
 
 	<div class="entry-summary hidden-xs">
 		<?php the_excerpt(); ?>
@@ -37,13 +37,13 @@
 				</div>
 		<?php } */?>
 		
-		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+		<?php if ( has_post_thumbnail() && !post_password_required() ) : ?>
 			<div class="entry-thumbnail">
 				<?php the_post_thumbnail(); ?>
 			</div>
 		<?php endif; ?>
 		
-		<?php the_content(__('Continue <span class="meta-nav">&rarr;</span>', 'hdn')); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
 	</div>
 
 <?php endif; ?>

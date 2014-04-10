@@ -80,13 +80,13 @@ function my_get_posts( $query ) {
 
 
 // USP prefix submitted content
-function my_the_content_filter($content) {
-	global $post;
-	$usp_author = get_post_meta($post->ID, 'user_submit_name', true);
-	if (usp_is_public_submission()) {
-		$content = $usp_author . ' writes: ' . $content;
-	}
-	return $content;
-}
-add_filter('the_content', 'my_the_content_filter');
+// function my_the_content_filter($content) {
+// 	global $post;
+// 	$usp_author = get_post_meta($post->ID, 'user_submit_name', true);
+// 	if (usp_is_public_submission()) {
+// 		$content = $usp_author . ' writes: ' . $content;
+// 	}
+// 	return $content;
+// }
+// add_filter('the_content', 'my_the_content_filter');
 ?>

@@ -10,7 +10,7 @@
         </div>
 		<?php } ?>
 
-		<?php include 'modules/featured.php';  ?>
+		<?php get_template_part( 'modules/content', 'featured');  ?>
 
 
 	<?php if ( have_posts() ) : ?>

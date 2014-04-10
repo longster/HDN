@@ -100,17 +100,17 @@
 		<div class="container">
 		    <div class="row">
 		        <div class="col-md-12 text-center">
-		            <h2><a href="<?php echo get_permalink(13133); ?>">Submit Your Articles With Us!</a></h2>
+		            <h2><a href="<?php echo get_permalink(13133); ?>">Share Your Information With Us!</a></h2>
 		            <h5>Announcements | News | Opinion | Support | Resources | Questions | Activities | Events | and more!</h5>
 		            <div class="row submit">
 		            	<div class="col-md-2 col-md-offset-3">
-		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-posts-with-us/submit-news/">Share News</a>
+		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-information-with-us/submit-news/">Submit News</a>
 		            	</div>
 		            	<div class="col-md-2">
-		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-posts-with-us/submit-activities/">Share Events</a>
+		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-information-with-us/submit-activities/">Submit Activities</a>
 		            	</div>
 		            	<div class="col-md-2">
-		            		<a class="btn btn-primary btn-block" href="http://localhost/directory/?action=submitlisting">Add Directory</a>
+		            		<a class="btn btn-primary btn-block" href="http://localhost/business-directory/?action=submitlisting">Submit Business Listing</a>
 		            	</div>
 		            </div>
 		        </div>
