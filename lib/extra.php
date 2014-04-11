@@ -11,47 +11,49 @@
  /**
   * Initialization. Add our script if needed on this page.
   */
- function pbd_alp_init() {
-    global $wp_query;
- 
-    // Add code to index pages.
-    if( !is_singular() && !is_search() ) {  
-        // Queue JS
-        wp_enqueue_script(
-            'pbd-alp-load-posts',
-            //plugin_dir_url( __FILE__ ) . 'assets/js/load-posts.js',
-            get_template_directory_uri() . '/assets/js/custom/load-posts.js',
-            array('jquery'),
-            '1.0',
-            true
-        );
+//         function pbd_alp_init() {
+//            global $wp_query;
+         
+            // Add code to index pages.
+//            if( !is_singular() && !is_search() ) {  
+                // Queue JS
+//                wp_enqueue_script(
+//                    'pbd-alp-load-posts',
+                    //plugin_dir_url( __FILE__ ) . 'assets/js/load-posts.js',
+//                    get_template_directory_uri() . '/assets/js/custom/load-posts.js',
+//                    array('jquery'),
+//                    '1.0',
+//                    true
+//                );
         
-        // Queue CSS
-//        wp_enqueue_style(
-//            'pbd-alp-style',
-//            plugin_dir_url( __FILE__ ) . 'style.css',
-//            false,
-//            '1.0',
-//            'all'
-//        );
+
+                // Queue CSS
+//              wp_enqueue_style(
+//                  'pbd-alp-style',
+//                  plugin_dir_url( __FILE__ ) . 'style.css',
+//                  false,
+//                  '1.0',
+//                  'all'
+//              );
         
-        // What page are we on? And what is the pages limit?
-        $max = $wp_query->max_num_pages;
-        $paged = ( get_query_var('paged') > 1 ) ? get_query_var('paged') : 1;
-        
-        // Add some parameters for the JS.
-        wp_localize_script(
-            'pbd-alp-load-posts',
-            'pbd_alp',
-            array(
-                'startPage' => $paged,
-                'maxPages' => $max,
-                'nextLink' => next_posts($max, false)
-            )
-        );
-    }
- }
- add_action('template_redirect', 'pbd_alp_init');
+
+                // What page are we on? And what is the pages limit?
+//                $max = $wp_query->max_num_pages;
+//                $paged = ( get_query_var('paged') > 1 ) ? get_query_var('paged') : 1;
+                
+                // Add some parameters for the JS.
+//                wp_localize_script(
+//                    'pbd-alp-load-posts',
+//                    'pbd_alp',
+//                    array(
+//                        'startPage' => $paged,
+//                        'maxPages' => $max,
+//                        'nextLink' => next_posts($max, false)
+//                    )
+//                );
+//            }
+//         }
+//         add_action('template_redirect', 'pbd_alp_init');
 
 
 

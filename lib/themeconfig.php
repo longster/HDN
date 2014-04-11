@@ -147,7 +147,7 @@ endif; // Post Meta information
 
 
 
-// highlight keyword search term
+// Search Results Highlight - Keyword search term
 function hdn_highlight_results($text){
      if(is_search()){
      $sr = get_query_var('s');
