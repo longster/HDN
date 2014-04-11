@@ -44,13 +44,13 @@
 		<?php endif; ?>
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
-		<?php if (usp_is_public_submission()) : ?>
-			<?php/* if (function_exists('is_submission')) is_submission(); */?>
+		<?php/* if (usp_is_public_submission()) : ?>
+			<?php if (function_exists('is_submission')) is_submission(); ?>
 			Contributed by: <?php if (function_exists('usp_author_link')) usp_author_link(); ?><br/>
 			USP Images: <?php $images = usp_get_post_images(); foreach ($images as $image) { echo $image; } ?><br/>
 			
 			USP Attachment: <?php if (function_exists('usp_post_attachments')) usp_post_attachments(); ?><br/>
-		<?php endif; ?>
+		<?php endif; */?>
 	</div>
 
 <?php endif; ?>
