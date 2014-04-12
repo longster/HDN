@@ -131,6 +131,7 @@
 						Blog
 					<?php elseif ( is_single() ) : 	// Single ?>
 						<?php the_category(', '); ?>
+						<?php /* $cat = get_the_category($post->id); echo $cat[0]->cat_name; */?>
 					<?php elseif ( is_page() ) : 	// Page ?>
 						<?php the_title(); ?>
 					<?php elseif ( is_category() ): // Category ?>
