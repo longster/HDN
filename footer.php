@@ -9,7 +9,7 @@
 			<?php } */?>
 
 			<div class="col-md-12 text-center">
-				<h2>Together We Stand, Divided We Fall...</h2>
+				<h2>Make connection, not war.</h2>
 			</div>
 		</div>
 	</div>

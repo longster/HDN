@@ -6,13 +6,15 @@
 <?php /* if it's not in or within directory (7) then show*/ ?>
 <?php if (!is_category(7) && !post_is_in_descendant_category(7)) : ?>
 
+		<?php /* show featured/announcement */ ?>
+		<?php get_template_part( 'modules/content', 'featured');  ?>
+
+		<?php /* adrotate long banner */ ?>
 		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
         <div class="adblock">
         	<?php echo adrotate_ad(2); ?>
         </div>
 		<?php } ?>
-
-		<?php get_template_part( 'modules/content', 'featured');  ?>
 
 
 	<?php if ( have_posts() ) : ?>

@@ -153,7 +153,7 @@ a.navbar-brand {
 }
 .featured {
    background-color: @skin-subtle;
-   padding: 1em 0 2em;
+   padding: 0 0 2em;
    .sticky-post {
       padding: 1px 15px 5px;
       margin-bottom: 0;
@@ -162,7 +162,10 @@ a.navbar-brand {
 
 .share-info {
    background-color: @skin-subtle;
-   padding: 1.75em 0;
+   padding: 2.75em 0 0;
+   a {
+      margin: .5em 0;
+   }
 }
 
 
@@ -186,7 +189,7 @@ a.navbar-brand {
 }
 
 
-/* Box post for index & categories */
+/* Box post for index, categories, & events */
 .row.list-unstyled {
    margin-bottom: 0;
 }
@@ -615,10 +618,9 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
          font-size: 1.15em;
       }
    }
-
    .featured {
       .sticky-post {
-         padding: 5px 25px 25px;
+         padding: 25px;
       }
    }
    .page-header {
@@ -638,7 +640,7 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
       a.box-entry-title {
          margin-top: 0;
          padding: 5px 10px;
-         height: 95px;
+         height: 105px;
          vertical-align: middle;
          display: block;
          overflow: hidden;
@@ -725,4 +727,10 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
    ========================================================================== */
 
 @media (min-width: @screen-lg) {
+
+   .share-info {
+      a {
+         margin: 0em;
+      }
+   }
 }
