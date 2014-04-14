@@ -77,7 +77,7 @@
 				) );  ?>
 				<?php get_search_form(); ?>
 				<ul class="nav navbar-nav navbar-right sharepost">
-					<li><a href="<?php echo get_permalink(13133); ?>">Share Articles!</a></li>
+					<li><a href="<?php echo get_permalink(12658); ?>">Advertise</a></li>
 				</ul>
 		  	</div><!-- /.navbar-collapse -->
 	  	</div><!-- /.container -->
@@ -110,7 +110,7 @@
 		            		<a class="btn btn-primary btn-block" href="http://localhost/share-your-information-with-us/submit-activities/">Submit Activities</a>
 		            	</div>
 		            	<div class="col-md-2">
-		            		<a class="btn btn-primary btn-block" href="http://localhost/business-directory/?action=submitlisting">Submit Business Listing</a>
+		            		<a class="btn btn-primary btn-block" href="http://localhost/business-directory/?action=submitlisting">Submit Business</a>
 		            	</div>
 		            </div>
 		        </div>
@@ -152,6 +152,12 @@
 				<?php endif;?>
 				</div>
 			</div>
+		</div>
+	</header>
+
+	<header class="share-info">
+		<div class="container">
+			<?php get_template_part( '/modules/submissions' ); ?>
 		</div>
 	</header>
 

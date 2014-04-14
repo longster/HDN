@@ -26,7 +26,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php if(is_page('events')) : ?>
-            <?php get_template_part( '/modules/content', 'block' ); ?>
+            <?php get_template_part( '/modules/content', 'events' ); ?>
         	<?php else : ?>
         	<?php get_template_part( '/modules/content', 'page' ); ?>
         	<?php endif; ?>

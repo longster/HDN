@@ -19,7 +19,9 @@
 		    </nav><!-- #nav-single -->
 			*/ ?>
 			
+			<?php if (is_single() && !post_is_in_descendant_category(7)) : ?>
 		    <?php comments_template( '', true ); ?>
+			<?php endif; ?>
 		
 			</div><!-- .col-md-8 -->
 

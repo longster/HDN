@@ -3,6 +3,8 @@
 <section id="content">
 <div class="container">
 
+<?php /* if it's not in or within directory (7) then show*/ ?>
+<?php if (!is_category(7) && !post_is_in_descendant_category(7)) : ?>
 
 		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
         <div class="adblock">
@@ -78,6 +80,38 @@
 		</div>
 	
 	<?php endif; // end have_posts() check ?>
+
+<?php /* else show directory (7) format */ ?>
+<?php else : ?><!-- directory -->
+
+	<div class="row">
+		<div class="col-md-8 col-md-9">
+	<?php if ( have_posts() ) : ?>
+	
+    	<?php while ( have_posts() ) : the_post(); ?>
+
+			<?php get_template_part( 'modules/content', get_post_format() ); ?>
+
+			<?php if (is_category(7) || post_is_in_descendant_category(7)) : ?>
+			<hr/>
+			<?php endif ; ?>
+
+		<?php endwhile; ?>
+
+	<?php else : ?>
+
+			<?php get_template_part( 'modules/content', 'none' ); ?>	
+	
+	<?php endif; // end have_posts() check ?>
+
+		</div><!-- .col-md-8 col-md-9 -->
+	
+	    <?php get_sidebar(); ?>
+	
+	</div><!-- .row -->
+
+<?php endif; ?><!-- directory -->
+
 	
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists('hdn_pagination') ) { hdn_pagination(); } elseif ( is_paged() ) { ?>
@@ -86,6 +120,7 @@
 			<div class="next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'hdn' ) ); ?></div>
 		</nav>
 		<?php } ?>
+
 
 </div><!-- .container -->
 </section><!-- #content -->

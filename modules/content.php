@@ -2,14 +2,10 @@
 	<header>
 	<?php if ( is_single() ) : ?>
 		<h1><?php the_title(); ?></h1>
-	<?php elseif (is_search() ) : ?>
+	<?php else : ?>
 		<h3 class="entry-title">
 			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h3>
-	<?php else : ?>
-		<h1 class="entry-title">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h1>
 	<?php endif; ?>
 
 	<?php if (is_single() ) : ?>
@@ -44,6 +40,7 @@
 		<?php endif; ?>
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
+		
 		<?php/* if (usp_is_public_submission()) : ?>
 			<?php if (function_exists('is_submission')) is_submission(); ?>
 			Contributed by: <?php if (function_exists('usp_author_link')) usp_author_link(); ?><br/>
@@ -51,10 +48,13 @@
 			
 			USP Attachment: <?php if (function_exists('usp_post_attachments')) usp_post_attachments(); ?><br/>
 		<?php endif; */?>
+
 	</div>
 
 <?php endif; ?>
 
-	<?php get_template_part( '/modules/author-bio' ); ?>
+	<?php if (is_single() && !post_is_in_descendant_category(7)) : ?>
+		<?php get_template_part( '/modules/author-bio' ); ?>
+	<?php endif ; ?>
     
 </article>
