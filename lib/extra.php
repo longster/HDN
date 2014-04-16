@@ -77,14 +77,15 @@ function my_get_posts( $query ) {
         $query->set( 'post_type', array( 'post', 'event' ) );
     return $query;
 }
+
 // Uses default category instead of Event Manger plugins category
 // http://wordpress.org/support/topic/events-manager-using-post-categories
-add_action('init', 'demo_add_default_boxes');
-function demo_add_default_boxes()
-{
-register_taxonomy_for_object_type('category', 'event');
-register_taxonomy_for_object_type('category', 'event-recurring');
-}
+//add_action('init', 'demo_add_default_boxes');
+//function demo_add_default_boxes()
+//{
+//register_taxonomy_for_object_type('category', 'event');
+//register_taxonomy_for_object_type('category', 'event-recurring');
+//}
 
 
 

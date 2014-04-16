@@ -23,7 +23,7 @@
 	- YES: Enable locaions
 	- NO: Require locations
 	- NO: drop down for locations
-	- YES: Enable location attributes
+	- NO: Enable location attributes
 	- NO: Show some love
 
 	Image Size
