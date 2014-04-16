@@ -405,9 +405,12 @@ div#user-submitted-image {
 
 
 /* Events Manager Plugin */
-
-
-/* Business Directory Plugin */
+#event-form {
+   .em-location-data-region,
+   .em-location-data-country {
+      display:none;
+   }
+}
 
 
 /* Gallery Shortcode */
@@ -651,12 +654,7 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
          }
       }
    }
-   ul.event-categories,
-   ul.event-categories li  {
-      margin-left: 0;
-      list-style: none;
-      padding-left:0;
-   }
+   /* User Submitted Post Plugin */
    div#user-submitted-posts fieldset {
       label {
          width: 20% !important;
@@ -680,6 +678,20 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
    }
    div#usp-submit, .usp-content .usp-input-error {
       margin-left: 20%;
+   }
+
+   /* Events Manager Plugin */
+   #event-form {
+      label {
+      }
+      input {}
+   }
+
+   ul.event-categories,
+   ul.event-categories li  {
+      margin-left: 0;
+      list-style: none;
+      padding-left:0;
    }
 
    ol.commentlist {

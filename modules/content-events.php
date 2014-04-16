@@ -1,4 +1,6 @@
 <div class="row">
+
+	<?php /* the_post_thumbnail(); */ ?>
 	<?php the_content(); ?>
 </div>
 
@@ -6,29 +8,98 @@
 <?php /* 
 	Event Manager Configuration 
 	------------------------------------------------------------------------------------------
-	CATEGORIES
+	CATEGORIES Settings
 	
-	GENERAL
+	GENERAL TAB
+	------------
 	General Options
+	- NO: Disable Thumbnail
+	- YES: Enable recurrence
 	- NO: Enable Bookings
+	- YES: Enable Tag/Categories
+	- YES: Enable event attributes
+	- NO: Enable event custom fields
+	- NO Default Location
+	- YES: Enable locaions
+	- NO: Require locations
+	- NO: drop down for locations
+	- YES: Enable location attributes
 	- NO: Show some love
-	- NO: Enable locaions
+
+	Image Size
+	- MAX width x height: 2000 x 2000
+	- MIN width x height: 10 x 10
+	- MAX size: 204800
+
+	User Capabilities
+	- Admin/Editor: 
+		- all checked
+	- Author/Contributor/Subscriber: 
+		- uncheck - publish, delete other, edit other, delete location, delete category, edit category, manage other bookings
 
 	Event Submission Forms
-	- YES - Allow anonymous event submissions?
+	- YES: Visual Editor
+	- YES: Show form again
+	- YES: Allow anonymous event submissions?
 	- ID user #(198) for incognito/guest - Guest Default User
+	
+	Peformance Optimzation
+	- Leave as default
 
 	Styling Options
-	- NO: Search forms
-	- NO: Locations list page
+	- YES: Search forms
+	- NO: Event/Location admin
+	- NO: Booking admin
+	- YES: Event Listing
+	- YES: Locations list page
 	- NO: Event booking forms
+	- YES: Tag and Categories List page
 
-	GENERAL > PAGE
+	Admin tool
+	- leave as default
+
+
+
+	PAGE TAB
+	------------
+	Permalink Slugs
+	- Leave as default
+
+	Event Pages
+	- Display event as POSTS
+	- Body class: activities
+	- Leave as default
+
+	Event List/Archives
+	- Event Page: EVents
+	- NO: Show event search
+	- NO: Display calendar
+	- NO: Disable title rewriting
 	- YES: Enable Archives
-	- YES: Include in Wordpress Searches
+	- Event archives scope: All events
+	- YES: override with format
+	- YES: Current event past events
+	- YES: Include wordpress search
+	- Event Listing Ordering: Start date, Start Time, Event name | All Descending
+	- Event List Scope: All events
+	- Event List Limit: 30
 
-	GENERAL > FORMAT
-	Events > Formatting > Default Event List Format (Remove header and footer format)
+	Location Page AND Location List/Archives
+	- leave as default
+
+	Event Categories
+	- Category Page: Categories
+	- YES: Override with formats
+	- List Limit: 10?
+	- Event Limit List: 20?
+
+	Event Tags | Other pages
+	- leave as default
+
+
+	FORMAT TAB
+	------------
+	Default Event List Format (Remove header and footer format)
 	------
 	<div class="relatedthumb box-post col-sm-6 col-md-4 col-lg-3">
 		<div class="thumbnail"> 
@@ -51,4 +122,28 @@
 
 		</div>
 	</div> 
+
+
+	Default Single Event Format
+	------
+	#_EVENTNOTES
+	<div style="float:right; margin:0px 0px 15px 15px;">#_LOCATIONMAP</div>
+
+	<p>
+		<strong>Date/Time</strong><br/>
+		Date(s) - #_EVENTDATES<br /><i>#_EVENTTIMES</i>
+	</p>
+
+	{has_location}
+	<p>
+		<strong>Location</strong><br/>
+		#_LOCATIONLINK
+	</p>
+	{/has_location}
+
+	<p>
+		<strong>Categories</strong>
+		#_CATEGORIES
+	</p>
+
 */ ?>
