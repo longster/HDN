@@ -16,7 +16,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php wp_title( '|', true, 'right' ); ?><?php echo get_bloginfo( 'name' ); ?></title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
