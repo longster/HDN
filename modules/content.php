@@ -27,11 +27,11 @@
 <?php else : ?>
 
 	<div class="entry-content hidden-xs">
-		<?php /* if (function_exists('adrotate_group') && is_single() ) { ?>
+		<?php  if (function_exists('adrotate_group') && is_single() ) { ?>
 				<div class="adblock-single hidden-xs text-center">
 					<?php echo adrotate_ad(1); ?>
 				</div>
-		<?php } */?>
+		<?php } ?>
 		
 		<?php if ( has_post_thumbnail() && !post_password_required() ) : ?>
 			<div class="entry-thumbnail">
