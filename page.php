@@ -10,10 +10,11 @@
 		    <?php endwhile; // end of the loop. ?>
 		    
 		    </div><!-- .col-md-10 .col-md-offset-1-->
-
-		    <?php /* get_sidebar(); */ ?>
 		    
 		</div><!-- .row -->
+		<div class="row">
+		    <?php /* get_sidebar(); */ ?>
+		</div>
 	</div>
 </section><!-- #content .container -->
 <?php get_footer();?>

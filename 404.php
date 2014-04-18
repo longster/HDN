@@ -3,7 +3,7 @@
 <section id="content">
 	<div class="container">	
 		<div class="row">
-			<div class="col-md-8 col-lg-9">
+			<div class="col-md-10 col-md-offset-1">
 		
 			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 				<header>
@@ -24,8 +24,9 @@
 			
 			</div>
 
+		</div><!-- .row -->
+		<div class="row">
 		    <?php get_sidebar(); ?>
-
 		</div><!-- .row -->
 	</div>
 </section><!-- #content .container -->

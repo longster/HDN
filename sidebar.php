@@ -1,4 +1,4 @@
-<aside id="sidebar" class="col-md-4 col-lg-3">
+<aside id="sidebar" class="col-md-10 col-md-offset-1">
 <?php if ( is_bbpress() ) : // bbpress ?>
 
     <?php dynamic_sidebar("Sidebar-Forums"); ?>
