@@ -181,7 +181,7 @@
 	- Categories list footer format: </ul>
 	- Default event list format header: <div class="row">
 	- Default events list format
-		<div class="relatedthumb box-post col-sm-6 col-md-4">
+		<div class="relatedthumb box-post col-sm-6 col-md-4 col-lg-3">
 			<div class="thumbnail"> 
 
 				<header class="box-entry-header hidden-xs">
@@ -215,6 +215,32 @@
 			#_LOCATIONTOWN, #_LOCATIONSTATE<br/>
 			#_LOCATIONPOSTCODE
 		</p>
+
+
+	Place this in PAGES > Events
+	----------------------------------
+	<h4 class="col-md-12">Upcoming Events</h4>
+	CONTENTS
+
+
+	<hr/>
+	<h4 class="col-md-12">Past Events</h4>
+	[events_list scope="past" limit="8" pagination=1]
+	<div class="relatedthumb box-post col-sm-6 col-md-4 col-lg-3">
+		<div class="thumbnail"> 
+			<header class="box-entry-header hidden-xs">
+				#_CATEGORIES 
+			</header><!-- .entry-header -->
+			<div class="box-entry-title">
+				<p>#_EVENTLINK<br/>#_EVENTDATES<br/>#_EVENTTIMES</p>
+			</div>
+			<footer class="box-entry-meta hidden-xs">		
+				<a href="mailto:#_CONTACTEMAIL">#_CONTACTNAME</a><a href="#_CONTACTURL" target="_blank" class="box-entry-meta-date pull-right">#_CONTACTURL</a>
+			</footer><!-- .box-entry-meta -->
+
+		</div>
+	</div> 
+	[/events_list]
 
 
 */ ?>

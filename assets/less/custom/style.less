@@ -411,6 +411,31 @@ div#user-submitted-image {
       display:none;
    }
 }
+.css-events-list {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.em-pagination {
+   text-align: center;
+   display: block;
+   .current, a {
+      padding: 6px 12px;
+      border: 1px solid #eee;
+   }
+   .current {
+      color: #3a3a3a;
+      background-color: #eee;
+   }   
+   a {
+      
+   }
+}
 
 
 /* Gallery Shortcode */
