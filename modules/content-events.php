@@ -222,10 +222,30 @@
 	<h4 class="col-md-12">Upcoming Events</h4>
 	CONTENTS
 
+	or use short code
+	
+	[events_list scope="future" limit="40" pagination=1]
+	<div class="relatedthumb box-post col-sm-6 col-md-4 col-lg-3">
+		<div class="thumbnail"> 
+			<header class="box-entry-header hidden-xs">
+				#_CATEGORIES 
+			</header><!-- .entry-header -->
+			<div class="box-entry-title">
+				<p>#_EVENTLINK<br/>#_EVENTDATES<br/>#_EVENTTIMES</p>
+			</div>
+			<footer class="box-entry-meta hidden-xs">		
+				<a href="mailto:#_CONTACTEMAIL">#_CONTACTNAME</a><a href="#_CONTACTURL" target="_blank" class="box-entry-meta-date pull-right">#_CONTACTURL</a>
+			</footer><!-- .box-entry-meta -->
 
-	<hr/>
-	<h4 class="col-md-12">Past Events</h4>
-	[events_list scope="past" limit="8" pagination=1]
+		</div>
+	</div> 
+	[/events_list]
+
+	
+
+	Place this in PAGES > Events > Past Events
+	----------------------------------
+	[events_list scope="past" limit="40" pagination=1]
 	<div class="relatedthumb box-post col-sm-6 col-md-4 col-lg-3">
 		<div class="thumbnail"> 
 			<header class="box-entry-header hidden-xs">
