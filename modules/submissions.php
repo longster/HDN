@@ -1,4 +1,4 @@
-<?php if(is_page('submit-activities') || is_page("submit-news") || is_bbpress()) :?>
+<?php if(is_page('submit-activities') || is_page("submit-news")) :?> <!--  || is_bbpress() -->
 <header class="share-info">
 	<div class="container">		
 		<div class="row">

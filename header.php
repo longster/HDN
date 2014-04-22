@@ -118,8 +118,8 @@
 						Front Page
 					<?php elseif ( is_home() ) : 	// Blog ?>
 						Blog
-					<?php elseif ( is_bbpress() ) :	// bbpress ?>
-						Forums
+					<?php /* elseif ( is_bbpress() ) :	// bbpress 
+						Forums */ ?>
 					<?php elseif ( is_single() ) : 	// Single ?>
 						<?php the_category(', '); ?>
 						<?php /* $cat = get_the_category($post->id); echo $cat[0]->cat_name; */?>
