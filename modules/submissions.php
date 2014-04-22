@@ -14,6 +14,7 @@
 						</div>
 						<div class="col-md-4">
 							<h3>Login</h3>
+							<p>You are NOT required to log in to submit form, BUT loging in or registering will allow you to edit/update your information. Your submission will be notified and we will review your information as soon as possible.</p>
 							<?php
 								if ( ! is_user_logged_in() ) { // Display WordPress login form: http://codex.wordpress.org/Customizing_the_Login_Form
 								    $args = array(
@@ -44,7 +45,7 @@
 							<h3>Submit Your Articles or Directory List</h3>
 							Houston Deaf Network does not list every post that is published. We're always looking for good content to share with readers. For more information, check <a href="#">HDN informative Guidelines</a>. By registering with us, you'll have the options to share information, activities, and be able to update/modify your own post. 
 							<hr/>
-							You are NOT required to, take a few moments to fill out the form and submit to us. We will review your information as soon as possible.
+							
 						</div>
 						<div class="col-md-4">
 							<h3>Login</h3>
