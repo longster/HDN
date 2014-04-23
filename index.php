@@ -87,29 +87,27 @@
 <?php else : ?><!-- directory -->
 
 	<div class="row">
-		<div class="col-md-8 col-md-9">
-	<?php if ( have_posts() ) : ?>
+		<div class="col-md-10 col-md-offset-1">
+		<?php if ( have_posts() ) : ?>
+		
+	    	<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php get_template_part( 'modules/content', get_post_format() ); ?>
+
+				<?php if (is_category(7) || post_is_in_descendant_category(7)) : ?>
+				<hr/>
+				<?php endif ; ?>
+
+			<?php endwhile; ?>
+
+		<?php else : ?>
+
+				<?php get_template_part( 'modules/content', 'none' ); ?>	
+		
+		<?php endif;?>
+		</div><!-- col-md-10 col-md-offset-1 -->
 	
-    	<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'modules/content', get_post_format() ); ?>
-
-			<?php if (is_category(7) || post_is_in_descendant_category(7)) : ?>
-			<hr/>
-			<?php endif ; ?>
-
-		<?php endwhile; ?>
-
-	<?php else : ?>
-
-			<?php get_template_part( 'modules/content', 'none' ); ?>	
-	
-	<?php endif; // end have_posts() check ?>
-
-		</div><!-- .col-md-8 col-md-9 -->
-	
-	    <?php get_sidebar(); ?>
-	
+	    <?php /* get_sidebar(); */ ?>
 	</div><!-- .row -->
 
 <?php endif; ?><!-- directory -->
