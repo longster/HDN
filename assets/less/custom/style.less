@@ -53,6 +53,14 @@ html {background-color: @skin-dark;}
 body {
    background-color: transparent;
 }
+::-moz-selection {
+    background: lighten(@brand-primary, 20%);
+    text-shadow: none;
+}
+::selection {
+    background: lighten(@brand-primary, 20%);
+    text-shadow: none;
+}
 
 
 
@@ -153,7 +161,7 @@ a.navbar-brand {
 }
 .featured {
    background-color: @skin-subtle;
-   padding: 0 0 2em;
+   padding: 0 0 1em;
    .sticky-post {
       padding: 1px 15px 5px;
       margin-bottom: 0;
@@ -302,6 +310,11 @@ ul.page-numbers li .page-numbers.current {
 .adblock {
    margin: 1em 0;
    text-align: center;
+   .advertisers {
+      min-height: 105px;
+      height: 105px;
+      overflow: hidden;
+   }
 }
 .adblock-post {
    background: @skin-primary;
@@ -320,10 +333,12 @@ ul.page-numbers li .page-numbers.current {
    text-align: center;   
    float: right;
 }
+/*
 .ads {
    height: 165px; 
    overflow: hidden;
 }
+*/
 
 
 

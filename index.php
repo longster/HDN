@@ -11,8 +11,15 @@
 
 		<?php /* adrotate long banner */ ?>
 		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
-        <div class="adblock">
-        	<?php echo adrotate_ad(2); ?>
+        <div class="adblock hidden-xs">
+        	<div class="row">
+        		<div class="col-md-3 col-md-offset-3 advertisers">
+        		<?php echo adrotate_ad(1); //Sorensons ?>
+        		</div>
+        		<div class="col-md-3 advertisers">
+        		<?php echo adrotate_ad(2); //Howard Knight ?>
+        		</div>
+        	</div>
         </div>
 		<?php } ?>
 
@@ -24,7 +31,7 @@
 
 			<?php get_template_part( 'modules/content', 'block' ); ?>
 
-    		<?php if (function_exists('adrotate_group')) { ?>
+    		<?php /* if (function_exists('adrotate_group')) { ?>
 			
 				<?php if( $wp_query->current_post == 3 ) { ?>
 				<li class="box-post col-sm-6 col-md-4 col-lg-3 hidden-xs">
@@ -70,7 +77,7 @@
 					</li>
 				<?php } ?>
 			
-			<?php } ?>
+			<?php } */ ?>
 
 		<?php endwhile; ?>
 		</ul>
