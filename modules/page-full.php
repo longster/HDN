@@ -11,9 +11,16 @@ get_header(); ?>
 <?php if (function_exists('adrotate_group') && is_page('events') ) { ?>
 <section id="content">
     <div class="container">
-	    <div class="adblock">
-	        <?php echo adrotate_ad(2); ?>
-	    </div>
+        <div class="adblock hidden-xs">
+        	<div class="row">
+        		<div class="col-md-3 col-md-offset-3 advertisers">
+        		<?php echo adrotate_ad(1); //Sorensons ?>
+        		</div>
+        		<div class="col-md-3 advertisers">
+        		<?php echo adrotate_ad(2); //Howard Knight ?>
+        		</div>
+        	</div>
+        </div>
     </div>
 </section>
 <?php }  ?>
