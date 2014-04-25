@@ -26,7 +26,7 @@
 
 		</div><!-- .row -->
 		<div class="row">
-		    <?php get_sidebar(); ?>
+		    <?php /* get_sidebar(); */ ?>
 		</div><!-- .row -->
 	</div>
 </section><!-- #content .container -->
