@@ -87,7 +87,7 @@
 	- YES: Include wordpress search
 	- Event Listing Ordering: Start date, Start Time, Event name | All Descending
 	- Event List Scope: All events
-	- Event List Limit: 40
+	- Event List Limit: 48
 
 	Location Page AND Location List/Archives
 	- leave as default
@@ -95,8 +95,8 @@
 	Event Categories
 	- Category Page: Categories
 	- YES: Override with formats
-	- List Limit: 50
-	- Event Limit List: 40
+	- List Limit: 48
+	- Event Limit List: 48
 
 	Event Tags | Other pages
 	- leave as default
@@ -131,7 +131,7 @@
 
 	Default Single Event Format 
 	------
-	#_EVENTIMAGE{150,0}
+	#_EVENTIMAGE{150,150}
 	#_EVENTNOTES
 
 	<div class="panel panel-default">
