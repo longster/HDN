@@ -556,6 +556,22 @@ ol.commentlist {
    .col-md-6.text-right {
       &:extend(.text-center);
    }
+   img.logo-foot {
+      width: 200px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+   }
+   .credit {
+      .col-md-6 {
+         text-align: center;
+         ul {
+            margin-bottom: 0;
+         }
+         .copyright {
+            margin-bottom: 20px;
+         }
+      }
+   }
 
 }
 
@@ -746,14 +762,6 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
          float: right;
       }
    }
-   #colophon {
-      .col-md-6 .col-md-12  {
-         text-align: inherit;
-      }
-      .col-md-6.text-right {
-         text-align: right;
-      }
-   }
 }
 
 
@@ -778,6 +786,14 @@ figure img, .wp-post-image {max-width: 100%; max-height: inherit;}
       h3 {
          font-size: 30px;
          margin-top: 0;
+      }
+   }
+   #colophon .credit {
+      .col-md-6 {
+         text-align: inherit;
+      }
+      .col-md-6.text-right {
+         text-align: right !important;
       }
    }
 }
