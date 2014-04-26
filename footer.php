@@ -8,7 +8,7 @@
 	        </div>
 			<?php } */?>
 
-			<div class="col-md-12 text-center">
+			<div class="col-md-12 text-center war">
 				<h2>Make connection, not war.</h2>
 			</div>
 		</div>
@@ -80,10 +80,10 @@
 			</div>
 			<div class="col-md-6 text-right">
 				<ul class="list-inline">
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-fb.png" alt="Facebook" /></a></li>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-twitter.png" alt="Twitter" /></a></li>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-linkedin.png" alt="LinkedIn" /></a></li>
-					<li><a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-fb.png" alt="RSS" /></a></li>
+					<li><a href="https://www.facebook.com/pages/Houston-Deaf-Network/170896381489" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-fb.png" alt="Facebook" /></a></li>
+					<li><a href="https://twitter.com/HoustonDeafNet"  target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-twitter.png" alt="Twitter" /></a></li>
+					<li><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-linkedin.png" alt="LinkedIn" /></a></li>
+					<li><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-rss.png" alt="RSS" /></a></li>
 				</ul>
 			</div>
 		</div>

@@ -334,12 +334,6 @@ ul.page-numbers li .page-numbers.current {
    text-align: center;   
    float: right;
 }
-/*
-.ads {
-   height: 165px; 
-   overflow: hidden;
-}
-*/
 
 
 
@@ -522,8 +516,10 @@ ol.commentlist {
    -webkit-box-shadow:inset 0 1px 0 0 lighten(@skin-dark, 25%);;
    box-shadow:inset 0 1px 0 0 lighten(@skin-dark, 25%);;
    color: lighten(@skin-dark, 15%);
-   h2 {
-      padding-bottom: 1em;
+   .war h2 {
+      padding-top: .1em;
+      padding-bottom: .5em;
+      margin-top:0;
       font-size: 40px;
    }
    a {
@@ -556,10 +552,16 @@ ol.commentlist {
    .col-md-6.text-right {
       &:extend(.text-center);
    }
-   img.logo-foot {
-      width: 200px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+   a img {
+      opacity:.7; 
+      &.logo-foot {
+         width: 200px;
+         margin-top: 10px;
+         margin-bottom: 10px;
+      }
+   }
+   a:hover img {
+         opacity: 1;
    }
    .credit {
       .col-md-6 {
