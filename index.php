@@ -31,10 +31,10 @@
 
 			<?php get_template_part( 'modules/content', 'block' ); ?>
 
-    		<?php /* if (function_exists('adrotate_group')) { ?>
+    		<?php if (function_exists('adrotate_group')) { ?>
 			
-				<?php if( $wp_query->current_post == 3 ) { ?>
-				<li class="box-post col-sm-6 col-md-4 col-lg-3 hidden-xs">
+				<?php if( $wp_query->current_post == 11 ) { ?>
+				<li class="box-post col-md-12 clearfix hidden-xs">
 					<article class="thumbnail text-center">
 						<div class="ads">
 							<?php echo adrotate_ad(1); ?>
@@ -44,7 +44,7 @@
 				</li>
 				<?php } ?>
 			
-				<?php if( $wp_query->current_post == 3 ) { ?>
+				<?php/*  if( $wp_query->current_post == 3 ) { ?>
 					<li class="box-post col-sm-6 col-md-4 col-lg-3 hidden-xs">
 						<article class="thumbnail text-center">
 							<div class="ads">
@@ -75,9 +75,9 @@
 							</div>
 						</article>
 					</li>
-				<?php } ?>
+				<?php } */  ?>
 			
-			<?php } */ ?>
+			<?php } ?>
 
 		<?php endwhile; ?>
 		</ul>
