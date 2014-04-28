@@ -52,7 +52,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
@@ -82,6 +81,11 @@
 		  	</div><!-- /.navbar-collapse -->
 	  	</div><!-- /.container -->
 	</nav><!-- /.navbar -->
+	<div class="beta alert alert-success">
+		<div class="container text-center">
+			<p><strong>HEADS UP!</strong> This site is still in the early stages of development. Please <a href="<?php echo get_permalink(20); ?>">contact us</a> if you encountered any problem.</p>
+		</div>
+	</div>
 
 <?php if(is_front_page() && is_home()) : ?>
     

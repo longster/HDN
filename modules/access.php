@@ -51,7 +51,7 @@
 				<?php /* wp_loginout(); */ ?>
 			</div>
 		</div>
-		<p class="alert alert-warning"><strong>Please Note:</strong> This form is still a working progress. If you're having trouble filling out the information, please let us know using the <a href="">contact form</a>. Thanks.</p>
+		<p class="alert alert-warning"><strong>Please Note:</strong> This form is still a working progress. If you're having trouble filling out the information, please let us know using the <a href="<?php echo get_permalink(20); ?>">contact form</a>. Thanks.</p>
 	</div>
 </header>
 <?php endif; ?>
