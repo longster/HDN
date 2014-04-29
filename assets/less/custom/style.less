@@ -302,6 +302,23 @@ ul.page-numbers li .page-numbers.current {
 }
 
 
+/* Adrotate style */
+.ad-1, .ad-2 img {
+   min-height: 90px;
+   height: 90px;   
+   margin: 5px;
+   cursor: pointer;
+   vertical-align: top;
+   overflow: hidden;
+   display:inline-block;
+}
+.ad-2 img {
+   display:inline-block !important;
+   margin-right: inherit !important;
+   margin-left: inherit !important;
+}
+
+
 
 /* Sidebar */
 #sidebar {
@@ -315,38 +332,8 @@ ul.page-numbers li .page-numbers.current {
 }
 
 
-/* Adrotate style */
-.adblock {
-   margin: 1em 0;
-   text-align: center;
-   .advertisers {
-      min-height: 105px;
-      height: 105px;
-      overflow: hidden;
-      background-color: @skin-primary;
-   }
-}
-.adblock-post {
-   background: @skin-primary;
-   border: 1px solid @skin-subtle;
-   margin: 0 0 10px;
-   padding: 20px 0; 
-   display: block;
-   text-align: center;
-}
-.adblock-single {
-   background: @skin-primary;
-   border: 1px solid @skin-subtle;
-   margin: 0 0 5px 5px;
-   padding: 10px 0; 
-   display: inline-block;
-   text-align: center;   
-   float: right;
-}
 
-
-
-/* Load Post Style */
+/* Load Post Style //Disabled cuz back state from single post won't retain it's position //
 #pbd-alp-load-posts {
    margin: 1em auto;
    a {
@@ -366,7 +353,7 @@ ul.page-numbers li .page-numbers.current {
 
 #pbd-alp-load-posts a:hover, #pbd-alp-load-posts a:active {
    opacity: 1;
-}
+}*/
 
 
 
@@ -374,7 +361,7 @@ ul.page-numbers li .page-numbers.current {
    User Submitted Posts - CSS for HTML5 form
    http://perishablepress.com/user-submitted-posts/
    Complete list of CSS hooks for the submission form @ http://m0n.co/e
-*/
+
 div#user-submitted-posts fieldset {
    margin-bottom: 1.6em; 
    label {
@@ -420,7 +407,7 @@ div#user-submitted-image {
    width: 100% !important;
    clear: none;
    margin-top: 0;
-}
+}*/
 
 
 /* Events Manager Plugin */

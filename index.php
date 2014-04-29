@@ -9,17 +9,15 @@
 		<?php /* show featured/announcement */ ?>
 		<?php get_template_part( 'modules/content', 'featured');  ?>
 
-		<?php /* adrotate long banner */ ?>
+		<?php /* adrotate long banner header */ ?>
 		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
-        <div class="adblock hidden-xs">
-        	<div class="row">
-        		<div class="col-md-3 col-md-offset-3 advertisers">
-        		<?php echo adrotate_ad(1); //Sorensons ?>
-        		</div>
-        		<div class="col-md-3 advertisers">
-        		<?php echo adrotate_ad(2); //Howard Knight ?>
-        		</div>
-        	</div>
+    	<div class="row">
+    		<div class="box-post col-md-12">
+    			<div class="thumbnail text-center">
+	        		<?php echo adrotate_ad(1); //Sorensons ?>
+	        		<?php echo adrotate_ad(2); //Howard Knight ?>
+    			</div>
+    		</div>
         </div>
 		<?php } ?>
 
@@ -34,12 +32,10 @@
     		<?php if (function_exists('adrotate_group')) { ?>
 			
 				<?php if( $wp_query->current_post == 11 ) { ?>
-				<li class="box-post col-md-12 clearfix hidden-xs">
+				<li class="box-post col-md-12 clearfix">
 					<article class="thumbnail text-center">
-						<div class="ads">
-							<?php echo adrotate_ad(1); ?>
-							<a href="/advertise/">Advertise with us.</a>
-						</div>
+		        		<?php echo adrotate_ad(1); //Sorensons ?>
+		        		<?php echo adrotate_ad(2); //Howard Knight ?>
 					</article>
 				</li>
 				<?php } ?>
@@ -118,6 +114,18 @@
 	</div><!-- .row -->
 
 <?php endif; ?><!-- directory -->
+
+		<?php /* adrotate long banner footer */ ?>
+		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
+    	<div class="row">
+    		<div class="box-post col-md-12">
+    			<div class="thumbnail text-center">
+	        		<?php echo adrotate_ad(1); //Sorensons ?>
+	        		<?php echo adrotate_ad(2); //Howard Knight ?>
+    			</div>
+    		</div>
+        </div>
+		<?php } ?>
 
 	
 		<?php /* Display navigation to next/previous pages when applicable */ ?>

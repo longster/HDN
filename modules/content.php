@@ -26,11 +26,14 @@
 	
 <?php else : ?>
 
-	<div class="entry-content hidden-xs">
+	<div class="entry-content">
 		<?php  if (function_exists('adrotate_group') && is_single() ) { ?>
-				<div class="adblock-single hidden-xs text-center">
-					<?php echo adrotate_ad(1); ?>
+			<div class="box-post text-center pull-right hidden-xs">
+				<div class="thumbnail">
+				<?php echo adrotate_ad(1); ?><br/>
+				<?php echo adrotate_ad(2); ?>
 				</div>
+			</div>
 		<?php } ?>
 		
 		<?php if ( has_post_thumbnail() && !post_password_required() ) : ?>

@@ -1,10 +1,3 @@
-<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
-<div class="adblock">
-	<?php echo adrotate_ad(2); ?>
-</div>
-<?php } ?>
-
-
 <?php 	$orig_post = $post; 
 		global $post; $categories = get_the_category($post->ID); 
 		if ($categories) { 
