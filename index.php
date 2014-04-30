@@ -29,6 +29,7 @@
 
 			<?php get_template_part( 'modules/content', 'block' ); ?>
 
+			<?php /* adrotate between posts */ ?>
     		<?php if (function_exists('adrotate_group')) { ?>
 			
 				<?php if( $wp_query->current_post == 11 ) { ?>
@@ -39,39 +40,6 @@
 					</article>
 				</li>
 				<?php } ?>
-			
-				<?php/*  if( $wp_query->current_post == 3 ) { ?>
-					<li class="box-post col-sm-6 col-md-4 col-lg-3 hidden-xs">
-						<article class="thumbnail text-center">
-							<div class="ads">
-								<?php echo adrotate_ad(3); ?>
-								<a href="/advertise/">Advertise with us.</a>
-							</div>
-						</article>
-					</li>
-				<?php } ?>
-			
-				<?php if( $wp_query->current_post == 3 ) { ?>
-					<li class="box-post col-sm-6 col-md-4 col-lg-3 hidden-xs">
-						<article class="thumbnail text-center">
-							<div class="ads">
-								<?php echo adrotate_ad(4); ?>
-								<a href="/advertise/">Advertise with us.</a>
-							</div>
-						</article>
-					</li>
-				<?php } ?>
-			
-				<?php if( $wp_query->current_post == 3 ) { ?>
-					<li class="box-post col-sm-6 col-md-4 col-lg-3 hidden-xs">
-						<article class="thumbnail text-center">
-							<div class="ads">
-								<?php echo adrotate_ad(4); ?>
-								<a href="/advertise/">Advertise with us.</a>
-							</div>
-						</article>
-					</li>
-				<?php } */  ?>
 			
 			<?php } ?>
 

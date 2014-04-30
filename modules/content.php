@@ -26,21 +26,31 @@
 	
 <?php else : ?>
 
+	<?php /* adrotate between title and content */ ?>
+	<?php  if (function_exists('adrotate_group') && is_single() ) { ?>
+	<div class="row">
+		<div class="box-post text-center col-md-12">
+			<div class="thumbnail">
+			<?php echo adrotate_ad(1); ?>
+			<?php echo adrotate_ad(2); ?>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
+
 	<div class="entry-content">
-		<?php  if (function_exists('adrotate_group') && is_single() ) { ?>
-			<div class="box-post text-center pull-right hidden-xs">
-				<div class="thumbnail">
-				<?php echo adrotate_ad(1); ?><br/>
-				<?php echo adrotate_ad(2); ?>
-				</div>
-			</div>
-		<?php } ?>
-		
-		<?php if ( has_post_thumbnail() && !post_password_required() ) : ?>
-			<div class="entry-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div>
-		<?php endif; ?>
+			
+		<?php 
+		 if ( has_post_thumbnail()) {
+		   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+		   echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >';
+		   the_post_thumbnail('small', array('class' => 'alignright'));
+		   echo '</a>';
+		 }
+		 ?>	
+		<?php /* if ( has_post_thumbnail() && !post_password_required() ) : ?>
+		<?php the_post_thumbnail('medium', array('class' => 'alignright')); ?>
+		<?php endif; */ ?>
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
 		

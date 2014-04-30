@@ -104,7 +104,7 @@
 		<div class="container">
 		    <div class="row">
 		        <div class="col-md-12 text-center">
-		            <h2><a href="<?php echo get_permalink(13133); ?>">Share Your Information With Us, FREE!</a></h2>
+		            <h2><a href="<?php echo get_permalink(13133); ?>">Share Your Information With Us!</a></h2>
 		            <h5>Announcements | News | Opinion | Support | Resources | Questions | Activities | Events | and more!</h5>
 		        </div>
 		    </div>
