@@ -151,7 +151,7 @@
 <?php endif; ?>
 
 	<?php /* show login form */ ?>
-	<?php get_template_part( '/modules/access' ); ?>	
+	<?php /* get_template_part( '/modules/access' ); */ ?>	
 
 	<?php /* show submission buttons */ ?>
 	<?php get_template_part( '/modules/submissions' ); ?>

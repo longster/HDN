@@ -44,6 +44,14 @@
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
 		
+		<?php if( get_post_meta($post->ID, 'Author Name', true) ) { ?>
+
+		Contact <a href="mailto:<?php echo get_post_meta($post->ID, 'Author Email', true); ?>"><?php echo get_post_meta($post->ID, 'Author Name', true); ?></a><br/>
+		<?php echo get_post_meta($post->ID, 'TDOMF Form #2 Custom Field #_1', true); ?> / <?php echo get_post_meta($post->ID, 'TDOMF Form #2 Custom Field #_2', true); ?> / <?php echo get_post_meta($post->ID, 'TDOMF Form #2 Custom Field #_3', true); ?>
+	
+		<?php } ?>
+
+
 		<?php/* if (usp_is_public_submission()) : ?>
 			<?php if (function_exists('is_submission')) is_submission(); ?>
 			Contributed by: <?php if (function_exists('usp_author_link')) usp_author_link(); ?><br/>
