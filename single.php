@@ -9,10 +9,8 @@
 				<?php get_template_part( '/modules/content', get_post_format() ); ?>
 			<?php endwhile; // End the loop ?>
 
-		    <!-- Related articles and 2 block of ad placement -->
+		    <!-- Related articles placement -->
 			<?php get_template_part( '/modules/related-posts' ); ?>
-
-			<?php /* get_template_part( '/modules/nav-single' ); */ ?>
 			
 			<?php if (is_single() && !post_is_in_descendant_category(7)) : ?>
 		    <?php comments_template( '', true ); ?>

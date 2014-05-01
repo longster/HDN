@@ -3,7 +3,7 @@
 	<div class="container">		
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<a class="btn btn-primary btn-block" href="<?php echo get_permalink(14958); ?>">Submit Articles, News, Activities, Events, Jobs, or Business Directory</a>
+				<a class="btn btn-primary btn-block" href="<?php echo get_permalink(14958); ?>">Submit your information: Articles, News, Activities, Events, Jobs, or Business Directory</a>
 			</div>
 			<!--div class="col-md-5 col-md-offset-1">
 				<a class="btn btn-primary btn-block" href="<?php echo get_permalink(14958); ?>">Submit News, Jobs, or Business</a>

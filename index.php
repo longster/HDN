@@ -3,7 +3,7 @@
 <section id="content">
 <div class="container">
 
-<?php /* if it's not in or within directory (7) then show*/ ?>
+<?php /* if it's not in or within directory (7) then show blocks*/ ?>
 <?php if (!is_category(7) && !post_is_in_descendant_category(7)) : ?>
 
 		<?php /* show featured/announcement */ ?>
@@ -54,8 +54,8 @@
 	
 	<?php endif; // end have_posts() check ?>
 
-<?php /* else show directory (7) format */ ?>
-<?php else : ?><!-- directory -->
+<?php /* else show directory (7) in standard listing format */ ?>
+<?php else : // start directory ?>
 
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
@@ -81,7 +81,7 @@
 	    <?php /* get_sidebar(); */ ?>
 	</div><!-- .row -->
 
-<?php endif; ?><!-- directory -->
+<?php endif; //end directory ?>
 
 		<?php /* adrotate long banner footer */ ?>
 		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
