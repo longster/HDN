@@ -39,7 +39,7 @@
 	   <?php 
 	   		if ( has_post_thumbnail() && !post_password_required()) {
 		   		$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-		   		echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" class="featured-img alignright" >';
+		   		echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" class="featured-img col-xs-12 col-sm-4 col-md-4 pull-right" >';
 		   		the_post_thumbnail('thumbnail'); echo get_post(get_post_thumbnail_id())->post_excerpt;
 		   		echo '</a>';
 		 	}
