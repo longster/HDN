@@ -28,11 +28,14 @@
 
 	<div class="entry-content">
 
-		 <?php if ( has_post_thumbnail() && !post_password_required()) : ?>
-		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="featured-img alignright">
-			<?php the_post_thumbnail('thumbnail'); echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-		   </a>
-		 <?php endif; ?>
+	   <?php 
+	   		if ( has_post_thumbnail() && !post_password_required()) {
+		   		$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+		   		echo '<a href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" class="featured-img alignright" >';
+		   		the_post_thumbnail('thumbnail'); echo get_post(get_post_thumbnail_id())->post_excerpt;
+		   		echo '</a>';
+		 	}
+		?>
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
 		
