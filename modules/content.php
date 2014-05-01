@@ -11,9 +11,17 @@
 	<?php if (is_single() ) : ?>
 		<footer class="entry-meta">
 			<?php /*hdn_entry_meta();*/ ?>
-			<span class="box-entry-meta-date">Published <?php echo get_the_date('F d Y'); ?></span> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a> 
-	            <?php edit_post_link( __( 'Edit', 'hdn' ), '<span class="edit-link pull-right">', '</span>' ); ?>
+			<span class="box-entry-meta-date">Published: <?php echo get_the_date('F d Y'); ?></span> / <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a> 
+            <?php edit_post_link( __( 'Edit', 'hdn' ), '<span class="edit-link pull-right">', '</span>' ); ?>
 		</footer>
+					
+		<?php if( get_post_meta($post->ID, 'Author Name', true) ) { ?>
+		<div class="well well-sm">
+			Contributed by: <?php echo get_post_meta($post->ID, 'Author Name', true); ?> | 
+			Email: <a href="mailto:<?php echo get_post_meta($post->ID, 'Author Email', true); ?>"><?php echo get_post_meta($post->ID, 'Author Email', true); ?></a>  | 
+			URL: <a href="<?php echo get_post_meta($post->ID, 'Author Webpage', true); ?>" target="_blank"><?php echo get_post_meta($post->ID, 'Author Webpage', true); ?></a>
+		</div>
+		<?php } ?>
 	<?php endif; ?>
 	</header>
 
@@ -38,14 +46,6 @@
 		?>
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
-		
-		<?php if( get_post_meta($post->ID, 'Author Name', true) ) { ?>
-
-		Contact <a href="mailto:<?php echo get_post_meta($post->ID, 'Author Email', true); ?>"><?php echo get_post_meta($post->ID, 'Author Name', true); ?></a><br/>
-		<?php echo get_post_meta($post->ID, 'TDOMF Form #2 Custom Field #_1', true); ?> / <?php echo get_post_meta($post->ID, 'TDOMF Form #2 Custom Field #_2', true); ?> / <?php echo get_post_meta($post->ID, 'TDOMF Form #2 Custom Field #_3', true); ?>
-	
-		<?php } ?>
-
 
 		<?php if ( !is_front_page() && !is_home() ) : ?>
 		<!-- Nav Post - Next/Previous -->
