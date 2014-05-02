@@ -19,7 +19,7 @@
 		<div class="well well-sm">
 			Contributed by: <?php echo get_post_meta($post->ID, 'Author Name', true); ?> | 
 			Email: <a href="mailto:<?php echo get_post_meta($post->ID, 'Author Email', true); ?>"><?php echo get_post_meta($post->ID, 'Author Email', true); ?></a>  | 
-			URL: <a href="<?php echo get_post_meta($post->ID, 'Author Webpage', true); ?>" target="_blank"><?php echo get_post_meta($post->ID, 'Author Webpage', true); ?></a>
+			URL: <?php echo get_post_meta($post->ID, 'Author Webpage', true); ?>
 		</div>
 		<?php } ?>
 	<?php endif; ?>
