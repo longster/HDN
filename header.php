@@ -118,55 +118,27 @@
 	<header class="page-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-1 hidden-xs hidden-sm">
+				<div class="col-md-12">
 					<h1 class="entry-title">
 					<?php if ( is_front_page() ) : 	// FrontPage ?>
-						icon 
-					<?php elseif ( is_home() ) : 	// Blog ?>
-						icon 
-					<?php elseif ( function_exists('is_bbpress') && is_bbpress() ) :	// bbpress ?>
-						icon  
-					<?php elseif ( is_single() ) : 	// Single ?>
-						icon 
-						<?php /* $cat = get_the_category($post->id); echo $cat[0]->cat_name; */?>
-					<?php elseif ( is_page() ) : 	// Page ?>
-						icon 
-					<?php elseif ( is_category() ): // Category ?>
-						icon 
-					<?php elseif ( is_tag() ) : 	// Tag ?>
-						icon 
-					<?php elseif ( is_author() ) : 	// Author ?>
-						icon 
-					<?php elseif ( is_search() ) : 	// Search ?>
-						icon 
-					<?php elseif ( is_archive() ) : // Archive ?>
-						icon 
-					<?php else :  					// 404 ?>
-						icon
-					</h1>
-				<?php endif;?>
-				</div>
-				<div class="col-md-10">
-					<h1 class="entry-title">
-					<?php if ( is_front_page() ) : 	// FrontPage ?>
-						Front Page
+						
 					<?php elseif ( is_home() ) : 	// Blog ?>
 						Blog
 					<?php elseif ( function_exists('is_bbpress') && is_bbpress() ) :	// bbpress ?>
-						Forums 
+						<span class="glyphicon glyphicon-comment hidden-xs text-center"></span>Forums 
 					<?php elseif ( is_single() ) : 	// Single ?>
-						<?php the_category(', '); ?>
+						<span class="glyphicon glyphicon-file hidden-xs text-center"></span><?php the_category(', '); ?>
 						<?php /* $cat = get_the_category($post->id); echo $cat[0]->cat_name; */?>
 					<?php elseif ( is_page() ) : 	// Page ?>
-						<?php the_title(); ?>
+						<span class="glyphicon glyphicon-info-sign hidden-xs text-center"></span><?php the_title(); ?>
 					<?php elseif ( is_category() ): // Category ?>
-						<?php single_cat_title(); ?>
+						<span class="glyphicon glyphicon-th-large hidden-xs text-center"></span><?php single_cat_title(); ?>
 					<?php elseif ( is_tag() ) : 	// Tag ?>
-						Tag: <?php single_tag_title(); ?>
+						<span class="glyphicon glyphicon-tag hidden-xs text-center"></span>Tag: <?php single_tag_title(); ?>
 					<?php elseif ( is_author() ) : 	// Author ?>
-						Author: <?php printf( esc_attr__( '%s', 'hdn' ), get_the_author() ); ?>
+						<span class="glyphicon glyphicon-user hidden-xs text-center"></span>Author: <?php printf( esc_attr__( '%s', 'hdn' ), get_the_author() ); ?>
 					<?php elseif ( is_search() ) : 	// Search ?>
-						<?php _e('Search Results for', 'hdn'); ?> "<?php echo get_search_query(); ?>"
+						<span class="glyphicon glyphicon-search hidden-xs text-center"></span><?php _e('Search Results for', 'hdn'); ?> "<?php echo get_search_query(); ?>"
 					<?php elseif ( is_archive() ) : // Archive ?>
 						Archives: <?php single_month_title(' '); ?>
 					<?php else :  					// 404 ?>
