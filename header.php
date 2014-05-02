@@ -46,13 +46,15 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/assets/img/ico/hdn-load.png" media="screen and (max-device-width: 320px)" />
 
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
-    
+
     <?php wp_head(); ?>
     
 </head>
 
 <body <?php body_class(); ?>>
-	<nav class="navbar navbar-default" role="navigation">
+	
+	<?php if( is_user_logged_in() ) : ?><style>body {padding-top: 0;}</style><?php endif ;?>
+	<nav class="navbar navbar-default<?php if( !is_user_logged_in() ) : ?> navbar-fixed-top<?php endif ;?>" role="navigation">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 		  	<div class="navbar-header">
@@ -116,13 +118,41 @@
 	<header class="page-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-1 hidden-xs hidden-sm">
+					<h1 class="entry-title">
+					<?php if ( is_front_page() ) : 	// FrontPage ?>
+						icon 
+					<?php elseif ( is_home() ) : 	// Blog ?>
+						icon 
+					<?php elseif ( function_exists('is_bbpress') && is_bbpress() ) :	// bbpress ?>
+						icon  
+					<?php elseif ( is_single() ) : 	// Single ?>
+						icon 
+						<?php /* $cat = get_the_category($post->id); echo $cat[0]->cat_name; */?>
+					<?php elseif ( is_page() ) : 	// Page ?>
+						icon 
+					<?php elseif ( is_category() ): // Category ?>
+						icon 
+					<?php elseif ( is_tag() ) : 	// Tag ?>
+						icon 
+					<?php elseif ( is_author() ) : 	// Author ?>
+						icon 
+					<?php elseif ( is_search() ) : 	// Search ?>
+						icon 
+					<?php elseif ( is_archive() ) : // Archive ?>
+						icon 
+					<?php else :  					// 404 ?>
+						icon
+					</h1>
+				<?php endif;?>
+				</div>
+				<div class="col-md-10">
 					<h1 class="entry-title">
 					<?php if ( is_front_page() ) : 	// FrontPage ?>
 						Front Page
 					<?php elseif ( is_home() ) : 	// Blog ?>
 						Blog
-					<?php  elseif ( function_exists('is_bbpress') && is_bbpress() ) :	// bbpress ?>
+					<?php elseif ( function_exists('is_bbpress') && is_bbpress() ) :	// bbpress ?>
 						Forums 
 					<?php elseif ( is_single() ) : 	// Single ?>
 						<?php the_category(', '); ?>
@@ -140,7 +170,7 @@
 					<?php elseif ( is_archive() ) : // Archive ?>
 						Archives: <?php single_month_title(' '); ?>
 					<?php else :  					// 404 ?>
-						Error 404</h1>
+						Error 404
 					</h1>
 				<?php endif;?>
 				</div>

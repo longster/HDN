@@ -19,13 +19,28 @@
 		while( 	$my_query->have_posts() ) { 
 				$my_query->the_post(); ?> 
 
-	<div class="relatedthumb box-post col-sm-4 col-md-4">
+	<div class="col-sm-4 col-md-4">
 		<div class="thumbnail"> 
+		<?php if ( has_post_thumbnail() && !post_password_required() ) : ?>
+			<div class="box-thumbnail hidden-xs">
+				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( '%s', 'hdn' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
+			</div><!-- .box-thumbnail -->
+
+		<?php else : ?>
+			
+			<div <?php post_class('empty-thumbnail hidden-xs'); ?>>
+				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( '%s', 'hdn' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"></a>
+			</div><!-- .empty-thumbnail -->
+		
+		<?php endif; ?>
+		
 			<header class="box-entry-header hidden-xs">
 				<?php the_category(', ') ?>
 			</header><!-- .entry-header -->
 
-			<a class="box-entry-title" rel="external" href="<?php the_permalink(); ?>"><?php/* the_post_thumbnail(array(100,100)); */?><?php the_title(); ?> </a> 
+			<div class="box-entry-title">
+				<a rel="external" href="<?php the_permalink(); ?>"><?php/* the_post_thumbnail(array(100,100)); */?><?php the_title(); ?> </a> 
+			</div>
 
 			<footer class="box-entry-meta hidden-xs">		
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a>

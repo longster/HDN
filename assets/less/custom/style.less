@@ -52,6 +52,7 @@ a {
 html {background-color: @skin-dark;}
 body {
    background-color: transparent;
+   padding-top: 42px;
 }
 ::-moz-selection {
     background: lighten(@brand-primary, 20%);
@@ -183,16 +184,24 @@ a.navbar-brand {
    a {
       margin: .5em 0;
    }
+   .btn {
+      white-space: normal;
+   }
 }
 
 
 /* Content */
 .page-header {
    padding: 10px 0 20px;
-   .entry-title a {
-      color: @skin-dark;
-      &:hover {
-         color: @brand-primary;
+   .entry-title {
+      font-size: 1.75em;
+      /* to add icon for each title.
+      padding-left: 8.33333333%;*/
+      a {
+         color: @skin-dark;
+         &:hover {
+            color: @brand-primary;
+         }
       }
    }
 }
@@ -203,6 +212,9 @@ a.navbar-brand {
 } 
 #content {
    padding: 2em 0;
+   h1 {
+      font-size: 1.75em;
+   }
 }
 
 
@@ -273,7 +285,7 @@ a.navbar-brand {
       a {
          font-size: 1.6em;
          color: @skin-dark;
-         letter-spacing: -1px;
+         /*letter-spacing: -1px;*/
          line-height: 1em;
          &:hover {
             color: @brand-primary;
@@ -355,7 +367,8 @@ ul.page-numbers li .page-numbers.current {
    /*padding-top: 20px;*/
    .featured-img {
       text-align: center;
-      margin: 0 0 1em 1.5em;
+      /*margin: 0 0 1em 1.5em;*/
+      clear: both;
       padding: 5px;
       background-color: @gray-lighter;
    }
@@ -438,93 +451,6 @@ ul.page-numbers li .page-numbers.current {
    opacity: 1;
 }*/
 
-
-
-/* 
-   User Submitted Posts - CSS for HTML5 form
-   http://perishablepress.com/user-submitted-posts/
-   Complete list of CSS hooks for the submission form @ http://m0n.co/e
-
-div#user-submitted-posts fieldset {
-   margin-bottom: 1.6em; 
-   label {
-      padding: .25em 0;
-   }
-   input.usp-input {
-      width:100%;
-      border: 1px solid #ddd;
-      padding: .25em .5em;
-      &.usp-clone {
-         padding: .75em;
-      }
-   }
-   select {
-      width: 100%;
-      margin-top: .15em;
-      font-size: 16px;
-   }
-   textarea {
-      width:100% !important;
-   }
-}
-div#usp-submit {
-   padding-left: 0;
-}
-div.usp-input-error {
-   background-color: #d9534f;
-   color: #fff;
-   text-align: left;
-   padding: .5em;
-   width:100%;
-}
-.wp-editor-container {
-   border: 1px solid #ddd;
-}
-
-#usp-upload-message{
-   display: none;
-}
-
-div#user-submitted-image {
-   margin: 0;
-   width: 100% !important;
-   clear: none;
-   margin-top: 0;
-}*/
-
-
-/* Events Manager Plugin 
-#event-form {
-   .em-location-data-region,
-   .em-location-data-country {
-      display:none;
-   }
-}
-.css-events-list {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
-    clear: both;
-  }
-}
-.em-pagination {
-   text-align: center;
-   display: block;
-   .current, a {
-      padding: 6px 12px;
-      border: 1px solid #eee;
-   }
-   .current {
-      color: #3a3a3a;
-      background-color: #eee;
-   }   
-   a {
-      
-   }
-}*/
 
 
 /* Gallery Shortcode */
@@ -796,58 +722,6 @@ img.attachment-full {}
          }
       }
    }
-   /* User Submitted Post Plugin 
-   div#user-submitted-posts fieldset {
-      label {
-         width: 20% !important;
-      }
-      input.usp-input, 
-      select, 
-      textarea,
-      #user-submitted-image {
-         width:80% !important;
-         float: left;
-      }
-      textarea {
-         margin-bottom: 10px;
-      }
-      #user-submitted-image {
-         margin-top:-5px;
-      }
-   }
-   div.usp-input-error {
-      width:80%;
-   }
-   div#usp-submit, .usp-content .usp-input-error {
-      margin-left: 20%;
-   }*/
-
-   /* Events Manager Plugin 
-   #event-form {
-      label {
-      }
-      input {}
-   }
-
-   ul.event-categories,
-   ul.event-categories li  {
-      margin-left: 0;
-      list-style: none;
-      padding-left:0;
-   }
-
-   ol.commentlist {
-      ul.children {
-         padding-left: 1.5em;
-      }
-      .comment-author {
-         float:left;
-      }
-      .comment-meta {
-         display: inline-block;
-         float: right;
-      }
-   }*/
 }
 
 
