@@ -89,13 +89,19 @@ body {
    }
 }
 a.navbar-brand {
-   text-indent: -10000px;
+   /*text-indent: -10000px;*/
    overflow: hidden;
    background: url(assets/img/logo-hdn-black-sm.png) no-repeat transparent;
-   background-position: 19px 10px;
+   background-position: 20px 10px;
    width: 75px;
    opacity: .8;
    border-right: 1px solid @gray-lighter;
+   .glyphicon {
+      left: 10px;
+      top: 0;
+      font-size: 19px;
+      color: #7daf28;   
+   }
    &.active {
       opacity: 1;
       &:hover {
@@ -244,9 +250,9 @@ a.navbar-brand {
       overflow: hidden;
       a img {
          width: 100%;
-         opacity: .7;
+         opacity: 1;
          &:hover {
-            opacity: 1;
+            opacity: .7;
          }
       }
    }
@@ -615,7 +621,8 @@ img.attachment-full {}
    }
    a.navbar-brand {
       //margin-left: 0px !important;
-      background-position: 27px 10px;
+      background-position: 52px 10px;
+      width: 100px;
    }
    .navbar-nav {
       a {
