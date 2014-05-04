@@ -132,17 +132,17 @@
 					<?php elseif ( is_page() ) : 	// Page ?>
 						<span class="glyphicon glyphicon-info-sign hidden-xs text-center"></span><?php the_title(); ?>
 					<?php elseif ( is_category() ): // Category ?>
-						<span class="glyphicon glyphicon-th-large hidden-xs text-center"></span><?php single_cat_title(); ?>
+						<span class="glyphicon glyphicon-star hidden-xs text-center"></span><?php single_cat_title(); ?>
 					<?php elseif ( is_tag() ) : 	// Tag ?>
 						<span class="glyphicon glyphicon-tag hidden-xs text-center"></span>Tag: <?php single_tag_title(); ?>
 					<?php elseif ( is_author() ) : 	// Author ?>
-						<span class="glyphicon glyphicon-user hidden-xs text-center"></span>Author: <?php printf( esc_attr__( '%s', 'hdn' ), get_the_author() ); ?>
+						<span class="glyphicon glyphicon-heart hidden-xs text-center"></span>Author: <?php printf( esc_attr__( '%s', 'hdn' ), get_the_author() ); ?>
 					<?php elseif ( is_search() ) : 	// Search ?>
 						<span class="glyphicon glyphicon-search hidden-xs text-center"></span><?php _e('Search Results for', 'hdn'); ?> "<?php echo get_search_query(); ?>"
 					<?php elseif ( is_archive() ) : // Archive ?>
-						Archives: <?php single_month_title(' '); ?>
+						<span class="glyphicon glyphicon-star hidden-xs text-center"></span>Archives: <?php single_month_title(' '); ?>
 					<?php else :  					// 404 ?>
-						Error 404
+						<span class="glyphicon glyphicon-exclamation-sign hidden-xs text-center"></span>Error 404
 					</h1>
 				<?php endif;?>
 				</div>

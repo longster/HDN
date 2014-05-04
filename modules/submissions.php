@@ -1,4 +1,4 @@
-<?php if(is_home() || is_category() || is_page('events') || is_page('directory')) : ?>
+<?php if(is_home() || is_category() || is_page()) : ?>
 <header class="share-info">
 	<div class="container">		
 		<div class="row">

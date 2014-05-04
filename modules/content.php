@@ -47,7 +47,7 @@
 		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'hdn' ) ); ?>
 
-		<?php if ( !is_front_page() && !is_home() ) : ?>
+		<?php if ( !is_front_page() && !is_home() && !is_category(7) && !post_is_in_descendant_category(7) ) : ?>
 		<!-- Nav Post - Next/Previous -->
 		<?php get_template_part( '/modules/nav-single' ); ?>
 		<?php endif; ?>
