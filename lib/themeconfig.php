@@ -43,9 +43,9 @@ add_action('after_setup_theme', 'hdn_theme_support'); /* end hdn theme support *
 // extend contact info in admin profile
 function hdn_contactmethods( $contactmethods ) {
     // Add Twitter
-    $contactmethods['twitter'] = 'Twitter';
+    $contactmethods['twitter'] = 'Twitter Username';
     //add Facebook
-    $contactmethods['facebook'] = 'Facebook';
+    $contactmethods['facebook'] = 'Facebook Username';
     return $contactmethods;
 }
 add_filter('user_contactmethods','hdn_contactmethods',10,1);

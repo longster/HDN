@@ -15,6 +15,7 @@
             <?php if ( get_the_author_meta( 'user_url' ) ) : ?> | <a href="<?php echo get_the_author_meta( 'user_url' ); ?>">website</a> <?php endif; ?>
             <?php if ( get_the_author_meta( 'twitter' ) ) : ?> | <a href="https://twitter.com/<?php the_author_meta('twitter'); ?>"><?php the_author_meta('twitter'); ?></a> <?php endif; ?>
             <?php if ( get_the_author_meta( 'facebook' ) ) : ?> | <a href="https://facebook.com/<?php the_author_meta('facebook'); ?>"><?php the_author_meta('facebook'); ?></a><?php endif; ?>
+            <?php if ( get_the_author_meta( 'google+' ) ) : ?> | <a href="https://plus.google.com/+<?php the_author_meta('google'); ?>"><?php the_author_meta('google+'); ?></a><?php endif; ?>
         </div><!-- #author-link -->
     </div><!-- #author-description -->
 

@@ -42,15 +42,15 @@ get_header(); ?>
 			</div>
 			<div class="row">
 				<div class="col-md-4"><!-- Health & Wellness -->
-					<h4><ul class="list-unstyled"><?php wp_list_categories('depth=1&include=737&title_li='); ?></ul></h4>
+					<h4><ul class="list-unstyled"><?php echo wp_list_categories('depth=1&include=20&title_li='); ?></ul></h4>
 					<p>Doctors, Clinic, Psychology, Chirapractice, Physical Therapist, etc.</p>
 				</div>
 				<div class="col-md-4"><!-- Religous Organizations -->
 					<h4><ul class="list-unstyled"><?php wp_list_categories('depth=1&include=69&title_li='); ?></ul></h4>
 					<p>Non profit religous organization - non denomitation, baptists, catholic, lutherian, etc...</p>
 				</div>
-				<div class="col-md-4"><!-- Education -->
-					<h4><ul class="list-unstyled"><?php wp_list_categories('depth=1&include=736&title_li='); ?></ul></h4>
+				<div class="col-md-4"><!-- Education Services-->
+					<h4><ul class="list-unstyled"><?php echo wp_list_categories('depth=1&include=8&title_li='); ?></ul></h4>
 					<p>From kindergarden to highschool, vocational rehabilitation, career development and more.</p>
 				</div>
 			</div>

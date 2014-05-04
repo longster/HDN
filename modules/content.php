@@ -58,9 +58,9 @@
 
 	<?php /* adrotate between title and content */ ?>
 	<?php  if (function_exists('adrotate_group') && is_single() ) { ?>
-	<div class="text-center" style="border-top: 1px dotted #eee; padding-top:15px;">
-		<?php echo adrotate_ad(1); ?>
-		<?php echo adrotate_ad(2); ?>
+	<div class="row text-center">
+		<div class="col-sm-6 col-md-6"><?php echo adrotate_ad(1); //Sorensons ?></div>
+		<div class="col-sm-6 col-md-6"><?php echo adrotate_ad(2); //Howard Knight ?></div>
 	</div>
 	<?php } ?>
 

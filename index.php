@@ -10,16 +10,15 @@
 		<?php get_template_part( 'modules/content', 'featured');  ?>
 
 		<?php /* adrotate long banner header */ ?>
-		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
+		<?php /* if (function_exists('adrotate_group') && !is_page() ) { ?>
     	<div class="row">
-    		<div class="box-post col-md-12">
+    		<div class="col-md-12">
     			<div class="thumbnail text-center">
-	        		<?php echo adrotate_ad(1); //Sorensons ?>
-	        		<?php echo adrotate_ad(2); //Howard Knight ?>
+	        		<?php  echo adrotate_ad(); //Company name ?>
     			</div>
     		</div>
         </div>
-		<?php } ?>
+		<?php } */ ?>
 
 
 	<?php if ( have_posts() ) : ?>
@@ -33,11 +32,15 @@
     		<?php if (function_exists('adrotate_group')) { ?>
 			
 				<?php if( $wp_query->current_post == 11 ) { ?>
-				<li class="box-post col-md-12 clearfix">
+				<li class="col-md-12 clearfix">
 					<article class="thumbnail text-center">
-		        		<?php echo adrotate_ad(1); //Sorensons ?>
-		        		<?php echo adrotate_ad(2); //Howard Knight ?>
-					</article>
+	    				<div class="row">
+	    					<div class="col-md-3"></div>
+		        			<div class="col-md-3"><?php echo adrotate_ad(1); //Sorensons ?></div>
+		        			<div class="col-md-3"><?php echo adrotate_ad(2); //Howard Knight ?></div>
+	    					<div class="col-md-3"></div>
+		        		</div>
+	    			</article>
 				</li>
 				<?php } ?>
 			
@@ -83,17 +86,16 @@
 
 <?php endif; //end directory ?>
 
-		<?php /* adrotate long banner footer */ ?>
-		<?php if (function_exists('adrotate_group') && !is_page() ) { ?>
+		<?php /* adrotate long banner header */ ?>
+		<?php /* if (function_exists('adrotate_group') && !is_page() ) { ?>
     	<div class="row">
-    		<div class="box-post col-md-12">
+    		<div class="col-md-12">
     			<div class="thumbnail text-center">
-	        		<?php echo adrotate_ad(1); //Sorensons ?>
-	        		<?php echo adrotate_ad(2); //Howard Knight ?>
+	        		<?php  echo adrotate_ad(); //Company name ?>
     			</div>
     		</div>
         </div>
-		<?php } ?>
+		<?php } */ ?>
 
 	
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
