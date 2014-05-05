@@ -17,9 +17,9 @@
 					
 		<?php if( get_post_meta($post->ID, 'Author Name', true) ) { ?>
 		<div class="well well-sm">
-			Contributed by: <?php echo get_post_meta($post->ID, 'Author Name', true); ?> | 
-			Email: <a href="mailto:<?php echo get_post_meta($post->ID, 'Author Email', true); ?>"><?php echo get_post_meta($post->ID, 'Author Email', true); ?></a>  | 
-			URL: <?php echo get_post_meta($post->ID, 'Author Webpage', true); ?>
+			Submitted by: <?php echo get_post_meta($post->ID, 'Author Name', true); ?> | 
+			Email: <a href="mailto:<?php echo get_post_meta($post->ID, 'Author Email', true); ?>"><?php echo get_post_meta($post->ID, 'Author Email', true); ?></a> 
+			<?php if( get_post_meta($post->ID, 'Author Webpage', true) ) { ?> | URL: <a href="<?php echo get_post_meta($post->ID, 'Author Webpage', true); ?>" target="_blank"><?php echo get_post_meta($post->ID, 'Author Webpage', true); ?></a><?php } ?>
 		</div>
 		<?php } ?>
 	<?php endif; ?>
