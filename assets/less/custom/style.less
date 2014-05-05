@@ -392,6 +392,66 @@ ul.page-numbers li .page-numbers.current {
 }
 
 
+/* bbp_widget_login */
+.login {
+   background: @skin-light;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   padding: 5px 13px 13px;
+   height:inherit;
+}
+.bbp_widget_login {
+   float: inherit;
+   display:block;
+   width:100%;
+   .bbp-logged-in {
+      h4 {
+         float: left;
+         margin-top: 15px;
+      }
+      .logout-link {
+         float: right;
+         margin-top: 14px;
+         display: block;
+      }
+      img.avatar {
+         margin-top: 8px;
+      }
+   }
+}
+.register {
+   margin-top: 15px;
+   float: inherit;
+}
+.bbp-username,
+.bbp-password,
+.bbp-remember-me,
+.bbp-submit-wrapper {
+   display: block !important;
+   input[type=text],
+   input[type=password] {
+      width: 100%;
+      border: 1px solid @gray-lighter;
+   }
+}
+.bbp-login-form,
+.bbp-password,
+.bbp-submit-wrapper {
+   label {
+   display: block !important;
+   }
+}
+.bbp-remember-me {
+   label {
+      width: 90%;
+      display:inline-block!important;
+   }
+}
+.bbp-submit-wrapper {
+   float:left!important;
+}
+
+
 /* Adrotate style */
 .ad-1, .ad-2 img {
    min-height: 90px;
@@ -705,6 +765,66 @@ img.attachment-full {}
             font-size: 1.5em;
          }
       }
+   }
+
+   /* bbp_widget_login */
+   .login {
+      background: @skin-light;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      padding: 5px 13px 13px;
+      height:65px;
+   }
+   .bbp_widget_login {
+      float: left;
+      display:inline-block;
+      .bbp-logged-in {
+         h4 {
+            float: left;
+         }
+         .logout-link {
+            float: right;
+            margin-top: 14px;
+         }
+      }
+   }
+   .register {
+      margin-top: 15px;
+      float: right;
+      position: relative;
+      top: -43px;
+   }
+   .bbp-username,
+   .bbp-password,
+   .bbp-remember-me,
+   .bbp-submit-wrapper {
+      display: inline-block !important;
+      label {
+         display: inline-block !important;
+      }
+      input[type=text],
+      input[type=password] {
+         width: 100px;
+      }
+   }
+   .bbp-login-form {
+      label {
+         width: 85px !important;
+      }
+   }
+   .bbp-password {
+      margin-left: 15px;
+      label {
+         width: 80px !important;
+      }
+   }
+   .bbp-remember-me {
+      label {
+         width: 125px !important;
+      }
+   }
+   .bbp-submit-wrapper {
+      float:inherit !important;
    }
 }
 

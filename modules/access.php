@@ -1,6 +1,15 @@
-<?php if(is_page('submit-activities') || is_page("submit-news") || function_exists('is_bbpress') && is_bbpress()) :?> 
+<?php if(function_exists('is_bbpress') && is_bbpress()) :?> 
 <header class="share-info">
 	<div class="container">		
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="login clearfix">
+			    	<?php dynamic_sidebar("Sidebar-Forums"); ?> <?php if( !is_user_logged_in() ) : ?><span class="register"><?php wp_register('', ''); ?></span><?php endif ;?>
+			    </div>
+			</div>
+		</div>
+		
+		<?php /*
 		<div class="well clearfix">
 			<div class="col-md-8">
 			
@@ -48,10 +57,11 @@
 				<?php wp_register('', ''); ?> | <a href="<?php echo wp_lostpassword_url( get_permalink() ); ?>" title="Forgot Password">Forgot Password</a>
 				<?endif;?>
 
-				<?php /* wp_loginout(); */ ?>
+				<?php /* wp_loginout();  ?>
 			</div>
 		</div>
 		<p class="alert alert-warning"><strong>Please Note:</strong> This form is still a working progress. If you're having trouble filling out the information, please let us know using the <a href="<?php echo get_permalink(20); ?>">contact form</a>. Thanks.</p>
-	</div>
+		<?php */ ?>
+	</div><!-- /.container -->
 </header>
 <?php endif; ?>
