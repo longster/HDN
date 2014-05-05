@@ -228,17 +228,15 @@ a.navbar-brand {
 .thumbnail {
    background: white; 
    padding:0;
-   border:0;
+   border: 1px solid @gray-lighter;
    border-radius: 0;
-   -webkit-box-shadow: 0 1px 0 0 @gray-lighter;
-   box-shadow: 0 1px 0 0 @gray-lighter;
    margin-top: 0em; 
    margin-bottom: 1px; 
    overflow: hidden;
    &:hover {
       //background: green; 
-      -webkit-box-shadow: 0 1px 10px 0 @gray-lighter;
-      box-shadow: 0 1px 10px 0 @gray-lighter;
+      -webkit-box-shadow: 0 1px 10px 0 lighten(@gray-dark, 70%);
+      box-shadow: 0 1px 10px 0 lighten(@gray-dark, 70%);
    }
    .box-thumbnail {
       height: 150px;
@@ -355,15 +353,17 @@ ul.page-numbers li .page-numbers.current {
 .single-post article.post { 
    background: white; 
    padding: 1.5em;
-   border:0;
    -webkit-border-radius: 5px;
    border-radius: 5px;
-   -webkit-box-shadow: 0 1px 0 0 @gray-lighter;
-   box-shadow: 0 1px 0 0 @gray-lighter;
+   border: 1px solid  @gray-lighter;
    margin-top: 0em; 
    margin-bottom: 1px; 
    iframe {
       width:100%;
+   }
+   &:hover {
+      -webkit-box-shadow: 0 1px 10px 0 lighten(@gray-dark, 70%);
+      box-shadow: 0 1px 10px 0 lighten(@gray-dark, 70%);
    }
 }
 .entry-content {

@@ -4,7 +4,7 @@
 <div class="container">
 
 <?php /* if it's not in or within directory (7) then show blocks*/ ?>
-<?php if (!is_category(7) && !post_is_in_descendant_category(7)) : ?>
+<?php if (!is_category(7,8,23,20,68,38,69) /* && !post_is_in_descendant_category(7)*/) : ?>
 
 		<?php /* show featured/announcement */ ?>
 		<?php get_template_part( 'modules/content', 'featured');  ?>
