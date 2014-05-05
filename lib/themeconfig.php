@@ -147,19 +147,17 @@ endif; // Post Meta information
 
 
 
-// Search Results Highlight - Keyword search term
-function hdn_highlight_results($text){
-     if(is_search()){
-     $sr = get_query_var('s');
-     $keys = explode(" ",$sr);
-     $text = preg_replace('/('.implode('|', $keys) .')/iu', '<span class="search-highlight">'.$sr.'</span>', $text);
-     }
-     return $text;
-}
-//add_filter('the_content', 'hdn_highlight_results');
-add_filter('the_excerpt', 'hdn_highlight_results');
-add_filter('the_title', 'hdn_highlight_results');
-
+// Search Results Highlight - Keyword search term (there's a bug on this function with multiple keywords)
+//function hdn_highlight_results($text){
+     //if(is_search()){
+     //$sr = get_query_var('s');
+     //$keys = explode(" ",$sr);
+     //$text = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">'.$sr.'</strong>', $text);
+     //}
+     //return $text;
+//}
+//add_filter('the_excerpt', 'hdn_highlight_results');
+//add_filter('the_title', 'hdn_highlight_results');
 
 
 
@@ -173,12 +171,12 @@ add_filter('the_title', 'hdn_highlight_results');
 // add_filter('pre_get_posts','hdn_search_filter');
 
 // exclude these specific pages from search filter ()
-function hdn_search_filter( $query ) {
-if ( $query->is_search && $query->is_main_query() ) {
-$query->set( ‘post__not_in’, array( 2,14356,12661,13232,45,13133,25750,14958,7,12,12658,224,16,18,20 ) );
-}
-}
-add_filter( ‘pre_get_posts’, ‘hdn_search_filter’ );
+// function hdn_search_filter( $query ) {
+// 		if ( $query->is_search && $query->is_main_query() ) {
+// 		$query->set( ‘post__not_in’, array( 2,14356,12661,13232,45,13133,25750,14958,7,12,12658,224,16,18,20 ) );
+	// }
+// }
+// add_filter( ‘pre_get_posts’, ‘hdn_search_filter’ );
 
 
 
