@@ -96,7 +96,7 @@
 		    <div class="row">
 		        <div class="col-md-12 hdn">
 		            <h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-hdn-full.png" class="logo" alt="Houston Deaf Network" /></a></h1>
-		            <h5><span>///</span> Your one source information where both Hearing and Deaf Community contribute, share, and network all within Houston area!</h5>
+		            <h5><span>///</span> Your one source information where both Deaf &amp; Hearing Community contribute, share, and network all within Houston area!</h5>
 		        </div>
 		    </div>
 	   	</div>
