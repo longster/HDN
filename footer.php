@@ -52,8 +52,8 @@
 				<ul class="list-inline">
 					<li><a href="https://www.facebook.com/pages/Houston-Deaf-Network/170896381489" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-fb.png" alt="Facebook" /></a></li>
 					<li><a href="https://twitter.com/HoustonDeafNet"  target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-twitter.png" alt="Twitter" /></a></li>
-					<li><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-linkedin.png" alt="LinkedIn" /></a></li>
-					<li><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-rss.png" alt="RSS" /></a></li>
+					<li class="hidden"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-linkedin.png" alt="LinkedIn" /></a></li>
+					<li><a href="http://www.houstondeafnetwork.com/feed/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icon-rss.png" alt="RSS" /></a></li>
 				</ul>
 			</div>
 		</div>
