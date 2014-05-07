@@ -21,7 +21,7 @@
 		
 		<footer class="box-entry-meta hidden-xs">		
 			<span class="box-entry-meta-date pull-right"><?php echo get_the_date('m.d.y'); ?></span>
-			<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a>
+			<?php the_author_posts_link(); ?>
 		</footer><!-- .box-entry-meta -->
 		
 	</article><!-- #post -->

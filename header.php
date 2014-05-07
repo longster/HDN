@@ -136,7 +136,7 @@
 					<?php elseif ( is_tag() ) : 	// Tag ?>
 						<span class="glyphicon glyphicon-tag hidden-xs text-center"></span>Tag: <?php single_tag_title(); ?>
 					<?php elseif ( is_author() ) : 	// Author ?>
-						<span class="glyphicon glyphicon-heart hidden-xs text-center"></span>Author: <?php printf( esc_attr__( '%s', 'hdn' ), get_the_author() ); ?>
+						<span class="glyphicon glyphicon-heart hidden-xs text-center"></span>Author: <?php if( is_author(205) ) : ?>Advocator<?php else: ?><?php echo get_the_author(); ?><?php endif; ?>
 					<?php elseif ( is_search() ) : 	// Search ?>
 						<span class="glyphicon glyphicon-search hidden-xs text-center"></span><?php _e('Search Results for', 'hdn'); ?> "<?php echo get_search_query(); ?>"
 					<?php elseif ( is_archive() ) : // Archive ?>
