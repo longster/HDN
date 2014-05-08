@@ -26,6 +26,11 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 		        <?php get_template_part( '/modules/content', 'page' ); ?>
 		    <?php endwhile; // end of the loop. ?>
+			<div class="row"><br/><br/>
+				<div class="col-md-6 col-md-offset-3">
+					<a href="http://www.houstondeafnetwork.com/category/directory/" class="btn btn-default btn-block">View all directory</a>
+				</div>
+			</div><!-- .row --><br/><br/>
 			<div class="row">
 				<div class="col-md-4"><!-- Professional Services -->
 					<h4><ul class="list-unstyled"><?php wp_list_categories('depth=1&include=38&title_li='); ?></ul></h4>
@@ -42,7 +47,7 @@ get_header(); ?>
 			</div>
 			<div class="row">
 				<div class="col-md-4"><!-- Health & Wellness -->
-					<h4><ul class="list-unstyled"><?php echo wp_list_categories('depth=1&include=20&title_li='); ?></ul></h4>
+					<h4><ul class="list-unstyled"><?php /*echo wp_list_categories('depth=1&include=20&title_li='); */?><li>Health &amp; Wellness</li></ul></h4>
 					<p>Doctors, Clinic, Psychology, Chirapractice, Physical Therapist, etc.</p>
 				</div>
 				<div class="col-md-4"><!-- Religous Organizations -->
@@ -50,12 +55,11 @@ get_header(); ?>
 					<p>Non profit religous organization - non denomitation, baptists, catholic, lutherian, etc...</p>
 				</div>
 				<div class="col-md-4"><!-- Education Services-->
-					<h4><ul class="list-unstyled"><?php echo wp_list_categories('depth=1&include=8&title_li='); ?></ul></h4>
+					<h4><ul class="list-unstyled"><?php/* echo wp_list_categories('depth=1&include=8&title_li='); */?><li>Education Services</li></ul></h4>
 					<p>From kindergarden to highschool, vocational rehabilitation, career development and more.</p>
 				</div>
 			</div>
 	    </div><!-- .col-md-10 .col-md-offset-1 -->
-	    <?php /* get_sidebar(); */ ?>
 	</div><!-- .row -->
 	</div>
 </section><!-- #content .container -->
